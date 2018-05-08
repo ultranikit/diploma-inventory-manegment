@@ -1,0 +1,1 @@
+[{"contractor_id":1, "contractor_name":"Best One", "contractor_email":"contractor@gmail.com", "contractor_phone":"+380932244130", "contractor_inn":"123213", "contractor_kpp":"123456789", "contractor_address":"salyutna street"}]

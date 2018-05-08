@@ -1,0 +1,163 @@
+header {
+    padding-left: 300px;
+}
+
+nav {
+    padding-left: 20px;
+}
+
+main {
+    padding-left: 320px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, footer {
+        padding-left: 0;
+    }
+
+    main {
+        padding-left: 20px;
+    }
+}
+#filters {
+  margin: 0;
+}
+#docList li {
+  padding: 0 37.5px 0 45px;
+}
+#docList li a {
+  font-weight: 400;
+}
+.sidenav li.active a {
+  color: #fff;
+}
+.navigation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navigation-add {
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 24px;
+}
+
+#tbodyUser tr .destroy {
+  display: none;
+  position: inherit;
+  top: 0;
+
+  margin-left: -50px;
+  right: 10px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+
+  font-size: 30px;
+  color: #cc9a9a;
+  margin-bottom: 11px;
+  transition: color 0.2s ease-out;
+}
+
+#tbodyUser tr .destroy:hover {
+  color: #af5b5e;
+}
+
+#tbodyUser tr .destroy:after {
+  content: '×';
+}
+
+#tbodyUser tr:hover .destroy {
+  display: block;
+}
+
+#tbodyStorage tr .destroy {
+  display: none;
+  position: inherit;
+  top: 0;
+
+  margin-left: -50px;
+  right: 10px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+
+  font-size: 30px;
+  color: #cc9a9a;
+  margin-bottom: 11px;
+  transition: color 0.2s ease-out;
+}
+
+#tbodyStorage tr .destroy:hover {
+  color: #af5b5e;
+}
+
+#tbodyStorage tr .destroy:after {
+  content: '×';
+}
+
+#tbodyStorage tr:hover .destroy {
+  display: block;
+}
+
+#tbodyContractor tr .destroy {
+  display: none;
+  position: inherit;
+  top: 0;
+
+  margin-left: -50px;
+  right: 10px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+
+  font-size: 30px;
+  color: #cc9a9a;
+  margin-bottom: 11px;
+  transition: color 0.2s ease-out;
+}
+
+#tbodyContractor tr .destroy:hover {
+  color: #af5b5e;
+}
+
+#tbodyContractor tr .destroy:after {
+  content: '×';
+}
+
+#tbodyContractor tr:hover .destroy {
+  display: block;
+}
+
+#showAddedProducts tr th {
+  text-align: center;
+  border: 0.5px solid #000;
+  font-weight: 400;
+}
+#showAddedProducts tr td {
+  text-align: center;
+  line-height: 0.5;
+  border: 0.5px solid #000;
+  font-weight: 400;
+}
+.collapsible-body table tr {
+  border-bottom: 0;
+}
+.collapsible-body table tr th {
+  text-align: center;
+  border: 0.5px solid #000;
+  font-weight: 400;
+}
+.collapsible-body tbody tr td {
+  text-align: center;
+  line-height: 0.5;
+  border: 0.5px solid #000;
+  font-weight: 400;
+}
+span.badge.new {
+  font-weight: 400;
+  font-size: 0.95rem;
+}

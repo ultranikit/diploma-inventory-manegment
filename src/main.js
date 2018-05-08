@@ -1,0 +1,32 @@
+import AllData from './js/all_data';
+import GroupList from './js/storage/group_list';
+import allRenderList from './js/render_all_list';
+import ProductAdd from './js/products/product_add';
+import ProductEdit from './js/products/product_edit';
+import ProductStore from './js/product_details_store';
+import GroupAdd from './js/storage/group_add';
+import StorageEdit from './js/storage/storage_edit';
+import ContractorList from './js/contractors/contractor_list';
+import ContractorAdd from './js/contractors/contractor_add';
+import ContractorEdit from './js/contractors/contractor_edit';
+import EntryDocumentAdd from './js/entryDocuments/entry_document_add';
+import EntryDocList from './js/entryDocuments/entry_document_list';
+import OutGoDocumentAdd from './js/outGoDocuments/outgo_document_add';
+import OutGoDocList from './js/outGoDocuments/outgo_document_list';
+
+
+allRenderList.bindTo('#tbodyUser');
+ProductStore.bindTo(document);
+AllData.bindTo(document);
+GroupList.bindTo('#tbodyStorage');
+ProductAdd.bindTo(document);
+ProductEdit.bindTo(document);
+GroupAdd.bindTo(document);
+StorageEdit.bindTo(document);
+ContractorList.bindTo('#tbodyContractor');
+ContractorAdd.bindTo(document);
+ContractorEdit.bindTo(document);
+EntryDocumentAdd.bindTo(document);
+EntryDocList.bindTo('#entryDocs');
+OutGoDocumentAdd.bindTo(document);
+OutGoDocList.bindTo('#outgoDocs');

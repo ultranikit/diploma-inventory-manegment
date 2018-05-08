@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/common.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
+</head>
+
+<body>
+<!--// modal for documents-->
+<div id="modalEntryDocumentAdd" class="modal modal-fixed-footer">
+</div>
+<div id="modalChooseProduct" class="modal modal-fixed-footer">
+</div>
+<div id="modalOutGoDocumentAdd" class="modal modal-fixed-footer">
+</div>
+<!--// modals for contractor-->
+<div id="modalContractorAdd" class="modal modal-fixed-footer">
+</div>
+<div id="modalContractorEdit" class="modal modal-fixed-footer">
+</div>
+<!--// modals for product-->
+<div id="modalEdit" class="modal modal-fixed-footer">
+</div>
+<div id="modalAdd" class="modal modal-fixed-footer">
+</div>
+<!--// modals for storage-->
+<div id="modalGroupAdd" class="modal modal-fixed-footer">
+</div>
+<div id="modalStorageEdit" class="modal modal-fixed-footer">
+</div>
+
+
+<div id="slide-out" class="sidenav sidenav-fixed navigation-container">
+  <div style="height: 64px;line-height: 64px;position: relative;background-color: #26a69a;color: #fff;text-align: center">Складской учет</div>
+  <ul  id="filters" style="position: inherit;top: 64px;width: 100%">
+    <li id="additions" class=""><a href="#/documents">Документы </a>
+    </li>
+    <div id="showList">
+      <ul id="docList">
+        <li><a href="#/entry_documents">Приходная накладная</a></li>
+        <li><a href="#/outcoming_documents">Расходная накладная</a></li>
+        <li><a href="#/moves">Движение по складу</a></li>
+      </ul>
+    </div>
+    <li class=""><a href="#/contractor">Поставщики <span class="badge" data-badge-caption=""></span></a></li>
+    <!--<li><a href="#/1">Списаный товар <span class="badge" data-badge-caption=""></span></a></li>-->
+    <li class=""><a href="#/storage">Склады <span class="badge" data-badge-caption=""></span></a></li>
+    <li class=""><a href="#/goods">Товары <span class="badge" data-badge-caption=""></span></a></li>
+  </ul>
+  <!--<div class="navigation-add">-->
+
+  <!--</div>-->
+</div>
+
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-target="slide-out" class="brand-logo sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <span class="page-title"></span>
+    </div>
+    <ul>
+      <li><button id="save_data">Сохранить товары</button></li>
+      <li><button id="save_storage">Сохранить склады</button></li>
+      <li><button id="trash">trash generate</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <table class="stripped">
+    <thead>
+
+    </thead>
+
+    <tbody id="tbodyUser">
+    </tbody>
+    <tbody id="tbodyStorage">
+    </tbody>
+    <tbody id="tbodyContractor">
+    </tbody>
+  </table>
+  <div id="documents">
+    <ul id="entryDocs" class="collapsible" style="position: relative">
+    </ul>
+    <ul id="outgoDocs" class="collapsible" style="position: relative">
+    </ul>
+  </div>
+
+</main>
+<div class="navigation-add" style="position: fixed;top: 7%;right: 0;">
+  <a id="btn-add-entry-document" class="btn-floating btn-large waves-effect waves-light">
+    <i class="material-icons">add</i>
+  </a>
+  <a id="btn-add-outgo-document" class="btn-floating btn-large waves-effect waves-light">
+    <i class="material-icons">add</i>
+  </a>
+  <a id="btn-add-contractor" class="btn-floating btn-large waves-effect waves-light">
+    <i class="material-icons">add</i>
+  </a>
+  <a id="btn-add-group" class="btn-floating btn-large waves-effect waves-light">
+    <i class="material-icons">add</i>
+  </a>
+  <a id="btn-add-user" class="btn-floating btn-large waves-effect waves-light">
+    <i class="material-icons">add</i>
+  </a>
+</div>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script src="../dist/bundle.js"></script>
+</body>
+</html>
