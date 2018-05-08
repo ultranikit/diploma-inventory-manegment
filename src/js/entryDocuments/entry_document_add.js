@@ -208,21 +208,21 @@ class EntryDocumentAdd extends Component {
       // Close upon selecting a date,
     });
     // make table for choose products
-    // this.products.sort((a, b) => a.product_name.localeCompare(b.product_name));
-    // this.products.reduce((acc, cur) => {
-    //   const findIndex = this.products.indexOf(this.products.find(item => item.product_name === acc.product_name));
-    //   if (acc.product_name === cur.product_name) {
-    //     this.products.forEach((item, newIndex) => {
-    //       if (item.product_name === acc.product_name) {
-    //         this.products.splice(findIndex, 1);
-    //         newIndex = findIndex;
-    //       }
-    //       // console.log(newIndex);
-    //       return newIndex;
-    //     });
-    //   }
-    //   return cur;
-    // });
+    this.products.sort((a, b) => a.product_name.localeCompare(b.product_name));
+    this.products.reduce((acc, cur) => {
+      const findIndex = this.products.indexOf(this.products.find(item => item.product_name === acc.product_name));
+      if (acc.product_name === cur.product_name) {
+        this.products.forEach((item, newIndex) => {
+          if (item.product_name === acc.product_name) {
+            this.products.splice(findIndex, 1);
+            newIndex = findIndex;
+          }
+          // console.log(newIndex);
+          return newIndex;
+        });
+      }
+      return cur;
+    });
     // make table for choose products end
     instance.open();
     this.allAddedProducts = [];
@@ -249,7 +249,6 @@ class EntryDocumentAdd extends Component {
 
 
     chooseProduct.addEventListener('click', () => {
-      // console.log('ZAWEL');
       const modalChoose = document.querySelector('#modalChooseProduct');
       // modalChoose.style.zIndex = '1004';
       // modalChoose.style.position = 'absolute';
@@ -294,6 +293,12 @@ class EntryDocumentAdd extends Component {
       const insetList = document.querySelector('#showProductsChoose');
 
       this.products.sort((a, b) => a.product_name.localeCompare(b.product_name));
+      // this.uniqueNameProd = [];
+      // this.products.forEach(item => {
+      //   if (!this.uniqueNameProd.includes(item.product_name)) {
+      //     this.uniqueNameProd.push(item.product_name);
+      //   }
+      // });
       this.products.reduce((acc, cur) => {
         const findIndex = this.products.indexOf(this.products.find(item => item.product_name === acc.product_name));
         if (acc.product_name === cur.product_name) {
