@@ -23,23 +23,24 @@ class allRenderList extends Component {
     this.vendorSort = document.querySelector('#vendor_sort');
     this.nameSort = document.querySelector('#name_sort');
     this.storageSort = document.querySelector('#storage_sort');
-    this.sortedArray = JSON.parse(localStorage.getItem('userHash'));
+    this.sortProducts = JSON.parse(localStorage.getItem('userHash'));
     this.vendorSort.addEventListener('click', () => {
-      this.sortedArray.sort((a, b) => a.vendor_code - b.vendor_code);
+      this.sortProducts.sort((a, b) => a.vendor_code - b.vendor_code);
       this.emit('renderUserList', this.sortedArray, document);
     });
     this.nameSort.addEventListener('click', () => {
-      this.sortedArray.sort((a, b) => a.product_name.localeCompare(b.product_name));
+      this.sortProducts.sort((a, b) => a.product_name.localeCompare(b.product_name));
       this.emit('renderUserList', this.sortedArray, document);
     });
     this.storageSort.addEventListener('click', () => {
-      this.sortedArray.sort((a, b) => a.storage_id - b.storage_id);
+      this.sortProducts.sort((a, b) => a.storage_id - b.storage_id);
       this.emit('renderUserList', this.sortedArray, document);
     });
     this.dropdownSort = document.querySelector('#dropdown-sort');
   }
   // eslint-disable-next-line consistent-return
   render(products) {
+    this.sortProducts = products;
     const groups = JSON.parse(localStorage.getItem('groupList'));
     const contractors = JSON.parse(localStorage.getItem('contractorList'));
     const allDocs = JSON.parse(localStorage.getItem('allDocuments'));
