@@ -72,6 +72,15 @@
     <ul id="info_search" style="display: contents;color: #000;">
       <li>Поиск : </li>
     </ul>
+    <!-- Dropdown Trigger -->
+    <a id="dropdown-sort" class='dropdown-trigger btn' style="max-height: 35px;margin-left: 30px;text-align: center" href='#' data-target='dropdown1'>Сортировать по:</a>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content' style="margin-left: 100px">
+      <li><a id="vendor_sort">Артикулу</a></li>
+      <li><a id="name_sort">Наименованию</a></li>
+      <li><a id="storage_sort">Складам</a></li>
+    </ul>
   </nav>
 </header>
 
@@ -116,5 +125,11 @@
 </div>
 <script type="text/javascript" src="js/materialize.js"></script>
 <script src="../dist/bundle.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, {});
+  });
+</script>
 </body>
 </html>

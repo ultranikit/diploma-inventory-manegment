@@ -19,6 +19,24 @@ class allRenderList extends Component {
         this.documentsDiv.style.display = 'none';
       }
     });
+    // sort dropdown menu
+    this.vendorSort = document.querySelector('#vendor_sort');
+    this.nameSort = document.querySelector('#name_sort');
+    this.storageSort = document.querySelector('#storage_sort');
+    this.sortedArray = JSON.parse(localStorage.getItem('userHash'));
+    this.vendorSort.addEventListener('click', () => {
+      this.sortedArray.sort((a, b) => a.vendor_code - b.vendor_code);
+      this.emit('renderUserList', this.sortedArray, document);
+    });
+    this.nameSort.addEventListener('click', () => {
+      this.sortedArray.sort((a, b) => a.product_name.localeCompare(b.product_name));
+      this.emit('renderUserList', this.sortedArray, document);
+    });
+    this.storageSort.addEventListener('click', () => {
+      this.sortedArray.sort((a, b) => a.storage_id - b.storage_id);
+      this.emit('renderUserList', this.sortedArray, document);
+    });
+    this.dropdownSort = document.querySelector('#dropdown-sort');
   }
   // eslint-disable-next-line consistent-return
   render(products) {
@@ -42,6 +60,7 @@ class allRenderList extends Component {
     const outgo_document_add = document.querySelector('#btn-add-outgo-document');
 
     const infoSelect = document.querySelector('#info_search');
+    this.dropdownSort.style.display = 'none';
     infoSelect.style.display = 'none';
     entryDocList.innerHTML = '';
     entryDocList.hidden = true;
@@ -114,6 +133,7 @@ class allRenderList extends Component {
         '    </tr>';
       return this.emit('renderContractorList', contractors, document);
     } else if (ourLocation === 'goods') {
+      this.dropdownSort.style.display = 'inline-block';
       infoSelect.style.display = 'block';
       button_add.style.display = 'block';
       page_title.innerText = 'Товары';
