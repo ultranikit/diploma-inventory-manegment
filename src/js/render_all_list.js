@@ -1,8 +1,9 @@
-/* eslint-disable camelcase,class-methods-use-this */
+/* eslint-disable camelcase,class-methods-use-this,max-len */
 import Component from './component';
 
 class allRenderList extends Component {
   init() {
+    this.searchString = '';
     this.on('renderUserList', this.render.bind(this), document);
     // this.on('count', this.countUsers.bind(this), document);
     // this.on('renderStorage', this.renderStorage.bind(this), document);
@@ -40,6 +41,8 @@ class allRenderList extends Component {
     const entry_document_add = document.querySelector('#btn-add-entry-document');
     const outgo_document_add = document.querySelector('#btn-add-outgo-document');
 
+    const infoSelect = document.querySelector('#info_search');
+    infoSelect.style.display = 'none';
     entryDocList.innerHTML = '';
     entryDocList.hidden = true;
     outgoDocList.innerHTML = '';
@@ -111,16 +114,33 @@ class allRenderList extends Component {
         '    </tr>';
       return this.emit('renderContractorList', contractors, document);
     } else if (ourLocation === 'goods') {
+      infoSelect.style.display = 'block';
       button_add.style.display = 'block';
       page_title.innerText = 'Товары';
       newTr.innerHTML = '    <tr>\n' +
         '      <th>Артикул</th>\n' +
-        // '      <th>Поставщик</th>\n' +
         '      <th>Наименование товара</th>\n' +
         '      <th>Склад</th>\n' +
         '      <th>Общее количество</th>\n' +
         '    </tr>';
 
+      if (infoSelect.children.length < 2) {
+        const createLi = document.createElement('li');
+        const createSearch = document.createElement('input');
+        createLi.style.color = '#000';
+        createLi.style.width = '20%';
+        createLi.style.paddingLeft = '5px';
+        createSearch.id = 'search';
+        createSearch.style.maxHeight = '30px';
+        createSearch.style.border = '1px solid #000';
+        createLi.appendChild(createSearch);
+        // infoSelect.appendChild(createLi);
+        infoSelect.appendChild(createLi);
+        const searchSelect = document.querySelector('#search');
+        searchSelect.addEventListener('keypress', this.searchProduct.bind(this));
+        searchSelect.addEventListener('keydown', this.deleteStringElem.bind(this));
+        searchSelect.addEventListener('keyup', this.updateInputValue.bind(this));
+      }
       products.forEach((item) => {
       // product elements
         const trItem = document.createElement('tr');
@@ -134,7 +154,6 @@ class allRenderList extends Component {
 
         trItem.id = item.user_id;
         vendor_code.innerText = item.vendor_code;
-        // contractor.innerText = item.contractor;
         product_name.innerText = item.product_name;
         storage_name.innerText = item.storage_name;
         product_number.style.paddingLeft = '50px';
@@ -142,21 +161,7 @@ class allRenderList extends Component {
         //  linkIcon.className = 'waves-effect waves-light btn-small';
         icon.className = 'destroy';
         icon.addEventListener('click', this.deleteGoods.bind(this));
-
-
-        // // location hash;
-
-
-        // const find_id = groups.find(item => item.group_id === ourLocation);
-        // if (typeof find_id === 'undefined') {
-        //   page_title.innerText = 'Select group, please!';
-        //   list.innerHTML = '';
-        //   // console.log('undefined');
-        // }
-        // console.log(ourLocation);
-
         trItem.appendChild(vendor_code);
-        // trItem.appendChild(contractor);
         trItem.appendChild(product_name);
         trItem.appendChild(storage_name);
         trItem.appendChild(product_number);
@@ -168,28 +173,45 @@ class allRenderList extends Component {
       page_title.innerText = 'Select group, please!';
       newTr.innerHTML = null;
     }
-    // } else {
-    //   page_title.innerText = 'Select group, please!';
-    //   list.innerHTML = '';
-    // }
-    // location hash end;
   }
-  // renderStorage(item){
-  //
-  //   linkIcon.className = 'waves-effect waves-light btn-small';
-  //   icon.className = 'destroy';
-  //
-  //   icon.addEventListener('click', this.deleteGoods.bind(this));
-  //
-  //   newTr.innerHTML = '    <tr>\n' +
-  //     '      <th>Name</th>\n' +
-  //     '      <th>Street</th>\n' +
-  //     '      <th>Zip code</th>\n' +
-  //     '      <th>City</th>\n' +
-  //     '      <th>Phone</th>\n' +
-  //     '      <th>Credits</th>\n' +
-  //     '    </tr>';
-  // }
+  // search function for products
+  updateInputValue(event) {
+    const updateProducts = JSON.parse(localStorage.getItem('userHash'));
+    const keyUp = event.keyCode;
+    if (keyUp === 8 || keyUp === 46) {
+      const searchInput = document.querySelector('#search').value;
+      // searchInput.value = this.searchString;
+      if (searchInput.length === 0) {
+        this.searchString = '';
+        this.sortedArray = updateProducts;
+      }
+      this.emit('renderUserList', this.sortedArray, document);
+    }
+  }
+  deleteStringElem(event) {
+    const updateProducts = JSON.parse(localStorage.getItem('userHash'));
+    const keyPress = event.keyCode;
+    if (keyPress === 8) {
+      this.searchString = this.searchString.slice(0, -1);
+      this.sortedArray = updateProducts.filter(item => item.product_name.indexOf(this.searchString) > -1
+        || item.vendor_code.toString().indexOf(this.searchString) > -1);
+    }
+  }
+  searchProduct(event) {
+    const updateProducts = JSON.parse(localStorage.getItem('userHash'));
+    if (this.searchString === null) {
+      this.emit('renderUserList', updateProducts, document);
+    }
+    const keyPress = event.keyCode;
+    if (keyPress !== 8 || keyPress !== 18 || keyPress !== 46) {
+      this.searchString += String.fromCharCode(keyPress);
+      this.searchString = this.searchString.toLowerCase();
+      this.sortedArray = updateProducts.filter(item => item.vendor_code.toString().indexOf(this.searchString) > -1 || item.product_name.indexOf(this.searchString) > -1);
+      this.sortedArray.sort((a, b) => a.vendor_code - b.vendor_code);
+      this.emit('renderUserList', this.sortedArray, document);
+    }
+    // search function for products end
+  }
   location(e) {
     const products = JSON.parse(localStorage.getItem('userHash'));
     const additionUl = document.querySelector('#docList');
