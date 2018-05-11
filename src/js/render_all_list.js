@@ -26,15 +26,15 @@ class allRenderList extends Component {
     this.sortProducts = JSON.parse(localStorage.getItem('userHash'));
     this.vendorSort.addEventListener('click', () => {
       this.sortProducts.sort((a, b) => a.vendor_code - b.vendor_code);
-      this.emit('renderUserList', this.sortedArray, document);
+      this.emit('renderUserList', this.sortProducts, document);
     });
     this.nameSort.addEventListener('click', () => {
       this.sortProducts.sort((a, b) => a.product_name.localeCompare(b.product_name));
-      this.emit('renderUserList', this.sortedArray, document);
+      this.emit('renderUserList', this.sortProducts, document);
     });
     this.storageSort.addEventListener('click', () => {
       this.sortProducts.sort((a, b) => a.storage_id - b.storage_id);
-      this.emit('renderUserList', this.sortedArray, document);
+      this.emit('renderUserList', this.sortProducts, document);
     });
     this.dropdownSort = document.querySelector('#dropdown-sort');
   }

@@ -313,30 +313,27 @@ class OutGoDocumentAdd extends Component {
       // console.log(selectTd.children[indexNewProd + 1].children[1].innerHTML);
       this.td.setAttribute('contenteditable', 'true');
       // console.log(this.td);
-      try {
-        this.td.addEventListener('keypress', (event) => {
-          const keyEnter = event.keyCode;
-          if (keyEnter === 13) {
-            findNewProd.product_name = selectTd.children[indexNewProd + 1].children[1].innerHTML;
-            findNewProd.product_number = Number(selectTd.children[indexNewProd + 1].children[2].innerHTML);
-            findNewProd.product_price = Number(selectTd.children[indexNewProd + 1].children[3].innerHTML);
-            findNewProd.product_sum = Number(selectTd.children[indexNewProd + 1].children[4].innerHTML);
-            // console.log(keyEnter);
-            this.td.removeAttribute('contenteditable');
-            this.priceCount();
-          }
-        });
-        this.td.addEventListener('blur', () => {
+      selectTd.setAttribute('contenteditable', 'false');
+      this.td.addEventListener('keypress', (event) => {
+        const keyEnter = event.keyCode;
+        if (keyEnter === 13) {
           findNewProd.product_name = selectTd.children[indexNewProd + 1].children[1].innerHTML;
           findNewProd.product_number = Number(selectTd.children[indexNewProd + 1].children[2].innerHTML);
           findNewProd.product_price = Number(selectTd.children[indexNewProd + 1].children[3].innerHTML);
           findNewProd.product_sum = Number(selectTd.children[indexNewProd + 1].children[4].innerHTML);
+          // console.log(keyEnter);
           this.td.removeAttribute('contenteditable');
           this.priceCount();
-        });
-      } catch (e) {
-        console.log('check');
-      }
+        }
+      });
+      this.td.addEventListener('blur', () => {
+        findNewProd.product_name = selectTd.children[indexNewProd + 1].children[1].innerHTML;
+        findNewProd.product_number = Number(selectTd.children[indexNewProd + 1].children[2].innerHTML);
+        findNewProd.product_price = Number(selectTd.children[indexNewProd + 1].children[3].innerHTML);
+        findNewProd.product_sum = Number(selectTd.children[indexNewProd + 1].children[4].innerHTML);
+        this.td.removeAttribute('contenteditable');
+        this.priceCount();
+      });
     });
     const saveDocBtn = document.querySelector('#createEntryDocument');
     saveDocBtn.addEventListener('click', this.addNewDocument.bind(this));
