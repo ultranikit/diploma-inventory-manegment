@@ -20,21 +20,13 @@ class ProductStore extends Component {
     }
 
     products.push(product);
-    // users.sort((a, b) => a.user_id - b.user_id);
     localStorage.setItem('userHash', JSON.stringify(products));
-    // console.log(user);
-    // console.log('New user is added!');
     clearOnCreate();
     this.emit('reRender', products, document);
-    // console.log(response);
   }
 
   editProduct(product) {
-    // console.log(user.user_id);
-    // const user_id = document.querySelector('#user_edit_id');
     const products = JSON.parse(localStorage.getItem('userHash'));
-    // console.log(users);
-
     function clearOnUpdate() {
       const modalEdit = document.querySelector('#modalEdit');
       modalEdit.innerHTML = '';
@@ -48,11 +40,8 @@ class ProductStore extends Component {
     products.push(product);
     products.sort((a, b) => a.storage_id - b.storage_id);
     localStorage.setItem('userHash', JSON.stringify(products));
-    // console.log('Old user is updated!');
     clearOnUpdate();
     this.emit('renderUserList', products, document);
-    // this.emit('renderUserList', users, document);
-    // console.log(response);
   }
 
   groupAdd(group) {
@@ -95,7 +84,6 @@ class ProductStore extends Component {
       }
     });
     localStorage.setItem('userHash', JSON.stringify(products));
-    // this.emit('renderGroups', storage, document);
     this.emit('renderGroups', storage, document);
   }
   contractorAdd(contractor) {

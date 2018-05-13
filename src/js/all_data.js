@@ -20,16 +20,16 @@ class AllData extends Component {
     } else {
       this.ClearSelectedMenu();
       this.products = [{
-        product_name: 'tov1', product_number: 21, storage_id: 2, storage_name: 'sklad 2', user_id: 334, vendor_code: '1231',
+        product_name: 'tov1', product_number: 21, storage_id: 2, storage_name: 'sklad 2', user_id: 334, vendor_code: '12',
       },
       {
-        product_name: 'tov2', product_number: 22, storage_id: 3, storage_name: 'sklad 3', user_id: 34, vendor_code: '1231',
+        product_name: 'tov2', product_number: 22, storage_id: 3, storage_name: 'sklad 3', user_id: 34, vendor_code: '432325',
       },
       {
-        product_name: 'tov3', product_number: 23, storage_id: 3, storage_name: 'sklad 3', user_id: 3324, vendor_code: '1231',
+        product_name: 'tov3', product_number: 23, storage_id: 3, storage_name: 'sklad 3', user_id: 3324, vendor_code: '332124',
       },
       {
-        product_name: 'tov4', product_number: 45, storage_id: 3, storage_name: 'sklad 3', user_id: 33224, vendor_code: '1231',
+        product_name: 'tov4', product_number: 45, storage_id: 3, storage_name: 'sklad 3', user_id: 33224, vendor_code: '14552',
       }];
 
       this.storage = [{
@@ -113,21 +113,21 @@ class AllData extends Component {
 
 export default AllData;
 
-function download(content, fileName, contentType) {
-  const a = document.createElement('a');
-  const file = new Blob([content], { type: contentType });
-  a.href = URL.createObjectURL(file);
-  a.download = fileName;
-  a.click();
-}
-
-const saveGoodsButton = document.querySelector('#save_data');
-saveGoodsButton.addEventListener('click', () => {
-  const users = localStorage.getItem('userHash');
-  download(users, 'goods.txt', 'text/plain');
-});
-const saveStorageButton = document.querySelector('#save_storage');
-saveStorageButton.addEventListener('click', () => {
-  const groups = localStorage.getItem('groupList');
-  download(groups, 'storage.txt', 'text/plain');
-});
+// function download(content, fileName, contentType) {
+//   const a = document.createElement('a');
+//   const file = new Blob([content], { type: contentType });
+//   a.href = URL.createObjectURL(file);
+//   a.download = fileName;
+//   a.click();
+// }
+//
+// const saveGoodsButton = document.querySelector('#save_data');
+// saveGoodsButton.addEventListener('click', () => {
+//   const users = localStorage.getItem('userHash');
+//   download(users, 'goods.txt', 'text/plain');
+// });
+// const saveStorageButton = document.querySelector('#save_storage');
+// saveStorageButton.addEventListener('click', () => {
+//   const groups = localStorage.getItem('groupList');
+//   download(groups, 'storage.txt', 'text/plain');
+// });

@@ -173,6 +173,9 @@ class allRenderList extends Component {
         // const linkIcon = document.createElement('a');
         const icon = document.createElement('a');
 
+        if (item.product_number < 0) {
+          product_number.style.backgroundColor = 'rgba(255, 15, 15, 0.15)';
+        }
         trItem.id = item.user_id;
         vendor_code.innerText = item.vendor_code;
         product_name.innerText = item.product_name;

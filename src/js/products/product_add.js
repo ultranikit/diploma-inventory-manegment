@@ -5,8 +5,8 @@ class ProductAdd extends Component {
   init() {
     const addButton = document.querySelector('#btn-add-user');
     addButton.addEventListener('click', this.openAddModal.bind(this));
-    const trash = document.querySelector('#trash');
-    trash.addEventListener('click', this.trash.bind(this));
+    // const trash = document.querySelector('#trash');
+    // trash.addEventListener('click', this.trash.bind(this));
   }
   trash() {
     for (let i = 0; i < 20; i += 1) {
@@ -26,7 +26,6 @@ class ProductAdd extends Component {
         user_id,
         storage_id,
         vendor_code,
-        // contractor,
         product_name,
         product_number,
         storage_name,

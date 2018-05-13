@@ -1,4 +1,4 @@
-/* eslint-disable camelcase,prefer-destructuring,class-methods-use-this */
+/* eslint-disable camelcase,prefer-destructuring,class-methods-use-this,max-len,no-param-reassign */
 import Component from '../component';
 
 class ProductEdit extends Component {
@@ -10,14 +10,12 @@ class ProductEdit extends Component {
   editProduct() {
     let user_id = Number(document.querySelector('#user_edit_id').innerText);
     const vendor_code = document.querySelector('#vendor_code').value;
-    // const contractor = document.querySelector('#contractor').value;
     const product_name = document.querySelector('#product_name').value;
     let product_number = document.querySelector('#product_number').value;
     const product_number_move = document.querySelector('#product_number').value;
-    // const check = product_number;
 
     product_number = Number(this.check - product_number);
-    const products = JSON.parse(localStorage.getItem('userHash'));
+    let products = JSON.parse(localStorage.getItem('userHash'));
     const group = document.querySelector('#modalEdit').querySelector('.storage').querySelector('.selected');
     const storage = JSON.parse(localStorage.getItem('groupList'));
     const findProduct = products.find(product => product.user_id === user_id);
@@ -26,16 +24,31 @@ class ProductEdit extends Component {
     let storage_id = findProduct.storage_id;
     let storage_name = findProduct.storage_name;
 
+    const documentList = JSON.parse(localStorage.getItem('allDocuments'));
+    // console.log(product_name);
+    // console.log(this.oldProdName);
+    documentList.forEach((item) => {
+      if (item.product_name === this.oldProdName) {
+        item.product_name = product_name;
+      }
+    });
+    localStorage.setItem('allDocuments', JSON.stringify(documentList));
+    products.forEach((item) => {
+      if (item.product_name === this.oldProdName) {
+        item.product_name = product_name;
+      }
+    });
+    localStorage.setItem('userHash', JSON.stringify(products));
+    products = JSON.parse(localStorage.getItem('userHash'));
     if (findProduct.storage_id === check_storage_id) {
       product_number = Number(product_number_move);
     }
 
-    console.log(this.check);
+    // console.log(this.check);
     const data = {
       user_id,
       storage_id,
       vendor_code,
-      // contractor,
       product_name,
       product_number,
       storage_name,
@@ -43,7 +56,7 @@ class ProductEdit extends Component {
 
     const findProductNew = products.find(product => (product.storage_name === find_group.name && product.product_name === product_name));
     if (findProductNew) {
-      console.log(findProductNew);
+      // console.log(findProductNew);
       product_number = Number(product_number_move) + findProductNew.product_number;
       this.dataMoveProduct = {
         user_id: findProductNew.user_id,
@@ -63,7 +76,6 @@ class ProductEdit extends Component {
         user_id,
         storage_id,
         vendor_code,
-        // contractor,
         product_name,
         product_number,
         storage_name,
@@ -86,13 +98,6 @@ class ProductEdit extends Component {
       '            <input id="vendor_code" type="text" class="validate">\n' +
       '            <label for="Артикул" data-error="wrong" data-success="right">Артикул</label>\n' +
       '          </div>\n' +
-      // '          <div class="input-field col s6 contractor">\n' +
-      // '            <select id="contractor_group_select">\n' +
-      // '              <option value="" disabled selected>Выбирете поставщика</option>\n' +
-      // '            </select>\n' +
-      // '            <label>Поставщик</label>\n' +
-      // '          </div>\n' +
-      // '        </div>\n' +
       '        </div>\n' +
       '        <div class="row">\n' +
       '          <div class="input-field col s12">\n' +
@@ -125,7 +130,6 @@ class ProductEdit extends Component {
     const updateBtn = document.querySelector('#EditUser');
     const user_id = document.querySelector('#user_edit_id');
     const vendor_code = document.querySelector('#vendor_code');
-    // const contractor = document.querySelector('#contractor');
     const product_name = document.querySelector('#product_name');
     const product_number = document.querySelector('#product_number');
 
@@ -134,14 +138,12 @@ class ProductEdit extends Component {
     // modal open
     const modal_edit = document.querySelector('#modalEdit');
     const select_group_edit = document.querySelector('#group_select_edit');
-    // const groupChange = select_group_edit.querySelector('option');
 
     storage.forEach((store) => {
       select_group_edit.innerHTML += `<option value="${store.id}">${store.name}</option>`;
     });
     const instance = M.Modal.init(modal_edit, {});
     M.FormSelect.init(select_group_edit, {});
-    // M.FormSelect.init(contractor_select_group, {});
     instance.open();
 
 
@@ -152,15 +154,13 @@ class ProductEdit extends Component {
     if (storageSelect.innerText === 'Выбирете склад') {
       updateBtn.setAttribute('disabled', '');
     }
-    // const group_disable = document.querySelector('.select-wrapper').children[0];
     const obj = products.find(product => product.user_id === Number(e.target.parentElement.id));
-    console.log(obj);
+
+    this.oldProdName = obj.product_name;
+    console.log(this.oldProdName);
 
     vendor_code.classList.add('valid');
     vendor_code.nextElementSibling.className = 'active';
-
-    // contractor.classList.add('valid');
-    // contractor.nextElementSibling.className = 'active';
 
     product_name.classList.add('valid');
     product_name.nextElementSibling.className = 'active';
@@ -170,30 +170,10 @@ class ProductEdit extends Component {
 
     user_id.innerText = obj.user_id;
     vendor_code.value = obj.vendor_code;
-    // contractor.value = obj.contractor;
     product_name.value = obj.product_name;
     product_number.value = obj.product_number;
 
     this.check = Number(product_number.value);
-
-
-    // const admin_check = groups.find(group => group.group_id === obj.group_id);
-    // console.log(admin_check);
-    // if (admin_check.is_admin) {
-    //   credit_input.disabled = true;
-    // }
-
-    // if (obj.credits === 0) {
-    //   edit_name.disabled = true;
-    //   edit_last_name.disabled = true;
-    //   edit_street.disabled = true;
-    //   edit_zip_code.disabled = true;
-    //   edit_city.disabled = true;
-    //   edit_phone.disabled = true;
-    //   group_disable.disabled = true;
-    //   credit_input.disabled = true;
-    //   updateBtn.setAttribute('disabled', '');
-    // }
     const clearOnOverlay = document.querySelector('.modal-overlay');
     const clearOnButton = document.querySelector('#modalEdit').querySelector('.modal-close');
 
@@ -209,7 +189,7 @@ class ProductEdit extends Component {
   checkUpdateBtn() {
     const storageSelect = document.querySelector('.selected');
     const editBtn = document.querySelector('#EditUser');
-    console.log(storageSelect.innerText);
+    // console.log(storageSelect.innerText);
     if (storageSelect.innerText === 'Выбирете склад') {
       editBtn.setAttribute('disabled', '');
     } else {
