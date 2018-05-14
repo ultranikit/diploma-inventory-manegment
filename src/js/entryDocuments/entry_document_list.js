@@ -155,14 +155,7 @@ class EntryDocList extends Component {
             trItem.appendChild(tdQuantity);
             trItem.appendChild(tdPrice);
             trItem.appendChild(tdSum);
-            // selectTable.innerHTML += `
-            //   <tr id="${item.user_id}">
-            //       <td>${this.addCount += 1}</td>
-            //       <td id="prod_name">${item.product_name}</td>
-            //       <td  id="quantity_${this.addCount}" >${item.product_number}</td>
-            //       <td  id="price_${this.addCount}">${item.product_price}</td>
-            //       <td id="sum_${this.addCount}">${item.product_sum}</td>
-            //   </tr>`;
+
             tableTbody.appendChild(trItem);
             elementDivHeader.innerHTML = `${EntryName} ${`№ ${item.entry_number}`}`;
             elementSpan.innerHTML = `Дата поступления: ${item.date}`;
