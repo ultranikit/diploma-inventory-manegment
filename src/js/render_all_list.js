@@ -153,6 +153,7 @@ class allRenderList extends Component {
         createLi.style.width = '20%';
         createLi.style.paddingLeft = '5px';
         createSearch.id = 'search';
+        createSearch.type = 'text';
         createSearch.style.maxHeight = '30px';
         createSearch.style.border = '1px solid #000';
         createLi.appendChild(createSearch);
@@ -203,8 +204,12 @@ class allRenderList extends Component {
   updateInputValue(event) {
     const updateProducts = JSON.parse(localStorage.getItem('userHash'));
     const keyUp = event.keyCode;
-    if (keyUp === 8 || keyUp === 46) {
+    if (keyUp === 8 || keyUp === 46 || keyUp === 13) {
       const searchInput = document.querySelector('#search').value;
+      this.searchString = searchInput;
+      console.log(this.searchString);
+      this.sortedArray = updateProducts.filter(item => item.product_name.indexOf(this.searchString) > -1
+        || item.vendor_code.toString().indexOf(this.searchString) > -1);
       // searchInput.value = this.searchString;
       if (searchInput.length === 0) {
         this.searchString = '';
@@ -221,15 +226,21 @@ class allRenderList extends Component {
       this.sortedArray = updateProducts.filter(item => item.product_name.indexOf(this.searchString) > -1
         || item.vendor_code.toString().indexOf(this.searchString) > -1);
     }
+    if (keyPress === 13) {
+      this.searchString.trim();
+      this.sortedArray = updateProducts.filter(item => item.product_name.indexOf(this.searchString) > -1
+        || item.vendor_code.toString().indexOf(this.searchString) > -1);
+    }
   }
   searchProduct(event) {
     const updateProducts = JSON.parse(localStorage.getItem('userHash'));
     if (this.searchString === null) {
       this.emit('renderUserList', updateProducts, document);
     }
-    const keyPress = event.keyCode;
-    if (keyPress !== 8 || keyPress !== 18 || keyPress !== 46) {
-      this.searchString += String.fromCharCode(keyPress);
+    const keyPress = event.key;
+    if (keyPress !== 'Enter' && keyPress !== 'Alt') {
+      console.log(keyPress);
+      this.searchString += keyPress;
       this.searchString = this.searchString.toLowerCase();
       this.sortedArray = updateProducts.filter(item => item.vendor_code.toString().indexOf(this.searchString) > -1 || item.product_name.indexOf(this.searchString) > -1);
       this.sortedArray.sort((a, b) => a.vendor_code - b.vendor_code);
