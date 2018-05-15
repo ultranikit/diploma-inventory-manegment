@@ -38,6 +38,7 @@ class allRenderList extends Component {
     });
     this.dropdownSort = document.querySelector('#dropdown-sort');
   }
+
   // eslint-disable-next-line consistent-return
   render(products) {
     this.sortProducts = products;
@@ -237,12 +238,21 @@ class allRenderList extends Component {
     // search function for products end
   }
   location(e) {
+    const htmlBody = document.querySelector('html');
+    const additionsList = document.querySelector('#additions');
     const products = JSON.parse(localStorage.getItem('userHash'));
     const additionUl = document.querySelector('#docList');
     const groupLength = document.querySelector('#filters');
     for (let i = 0; i < groupLength.children.length; i += 1) {
       groupLength.children[i].style.backgroundColor = 'transparent';
       groupLength.children[i].className = ''; // clear class active for all group list;
+      if (htmlBody.clientWidth <= 992 && i < groupLength.children.length - 1) {
+        groupLength.children[i + 1].addEventListener('click', () => {
+          const elem = document.querySelector('.sidenav');
+          const instance = M.Sidenav.getInstance(elem);
+          instance.close();
+        });
+      }
     }
     for (let i = 0; i < additionUl.childElementCount; i += 1) {
       additionUl.children[i].style.backgroundColor = 'transparent';

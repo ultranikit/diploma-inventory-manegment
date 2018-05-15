@@ -205,7 +205,7 @@ class OutGoDocumentAdd extends Component {
     datePickerModal.style.width = '600px';
 
     const modalOpened = document.querySelector('.open');
-    modalOpened.style.width = '60%';
+    // modalOpened.style.width = '60%';
     modalOpened.style.maxHeight = '80%';
     modalOpened.style.height = '80%';
     // modalEntryAdd.style.width = '75%';

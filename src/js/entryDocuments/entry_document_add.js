@@ -141,18 +141,8 @@ class EntryDocumentAdd extends Component {
       '            <input id="entry_data" type="text" class="datepicker">\n' +
       '            <label for="Date">Дата получения</label>\n' +
       '          </div>\n' +
-      // '          <div class="input-field col s6">\n' +
-      // '            <input type="text" class="sale_datepicker">\n' +
-      // '            <label for="Date">Дата продажи</label>\n' +
-      // '          </div>\n' +
               '</div>\n' +
       '        </div>\n' +
-      // '        <div class="row">\n' +
-      // '          <div class="input-field col s12">\n' +
-      // '            <input id="product_name" type="text" class="validate">\n' +
-      // '            <label for="Наименование товара" data-error="wrong" data-success="right">Наименование товара</label>\n' +
-      // '          </div>\n' +
-      // '        </div>\n' +
       '        <div class="row">\n' +
       '          <div class="input-field col s6 storage">\n' +
       '            <select id="choose_entry_storage">\n' +
@@ -225,6 +215,9 @@ class EntryDocumentAdd extends Component {
     });
     // make table for choose products end
     instance.open();
+    // const myModal = document.querySelector('#modalEntryDocumentAdd');
+    // myModal.style.width = '100%';
+    // console.log(myModal);
     this.allAddedProducts = [];
     this.changeProducts = [];
     const datePickerModal = document.querySelector('.datepicker-modal');
@@ -234,7 +227,7 @@ class EntryDocumentAdd extends Component {
     datePickerModal.style.width = '600px';
 
     const modalOpened = document.querySelector('.open');
-    modalOpened.style.width = '60%';
+    // modalOpened.style.width = '60%';
     modalOpened.style.maxHeight = '80%';
     modalOpened.style.height = '80%';
     // modalEntryAdd.style.width = '75%';

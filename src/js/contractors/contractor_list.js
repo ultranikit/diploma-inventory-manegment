@@ -7,6 +7,7 @@ class ContractorList extends Component {
   }
   render(contractors) {
     const table = document.querySelector('.stripped');
+    table.style.marginTop = '20px';
     const docFragment = document.createDocumentFragment();
     const list = document.querySelector('#tbodyContractor');
     list.innerHTML = '';
