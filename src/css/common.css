@@ -166,6 +166,7 @@ span.badge.new {
   font-weight: 400;
   font-size: 0.95rem;
 }
+
 @media only screen and (max-width: 400px) {
   html {
     font-size: 8px;
@@ -260,5 +261,9 @@ span.badge.new {
     top: 50px;
     height: 30px;
     width: 30px;
+  }
+  .btn-large i {
+    bottom: 12px;
+    position: inherit;
   }
 }
