@@ -13,6 +13,8 @@ import EntryDocumentAdd from './js/entryDocuments/entry_document_add';
 import EntryDocList from './js/entryDocuments/entry_document_list';
 import OutGoDocumentAdd from './js/outGoDocuments/outgo_document_add';
 import OutGoDocList from './js/outGoDocuments/outgo_document_list';
+import MoveDocumentAdd from './js/moveDocuments/move_product_add';
+import MoveDocList from './js/moveDocuments/move_document_list';
 
 
 allRenderList.bindTo('#tbodyUser');
@@ -30,3 +32,5 @@ EntryDocumentAdd.bindTo(document);
 EntryDocList.bindTo('#entryDocs');
 OutGoDocumentAdd.bindTo(document);
 OutGoDocList.bindTo('#outgoDocs');
+MoveDocumentAdd.bindTo(document);
+MoveDocList.bindTo('#moveDocs');

@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign,class-methods-use-this */
 import Component from '../component';
 
 class EntryDocList extends Component {
@@ -9,6 +10,7 @@ class EntryDocList extends Component {
     if (documents !== null) {
       documents = documents.filter(item => item.document === 1);
       if (documents.length === 1) {
+      // eslint-disable-next-line no-return-assign
         documents.forEach(item => item.document_number = 0);
       } else {
         documents.sort((a, b) => a.document_number - b.document_number);
@@ -18,17 +20,17 @@ class EntryDocList extends Component {
             this.uniqueLength.push(item.document_number);
           }
         });
-        console.log(this.uniqueLength);
+        // console.log(this.uniqueLength);
         // const maxDocLength = Math.max(...documents.map(item => item.document_number));
         for (let i = 0; i < this.uniqueLength.length; i += 1) {
-          console.log(this.uniqueLength[i]);
+          // console.log(this.uniqueLength[i]);
           documents.forEach((item) => {
             if (item.document_number === this.uniqueLength[i]) {
               item.document_number = i;
             }
           });
         }
-        console.log(documents);
+        // console.log(documents);
       }
       // console.log(documents);
       this.counter = 0;
@@ -36,9 +38,12 @@ class EntryDocList extends Component {
       const maxDocLength = Math.max(...documents.map(item => item.document_number));
       const documentList = document.querySelector('#entryDocs');
       const outGoList = document.querySelector('#outgoDocs');
+      const moveList = document.querySelector('#moveDocs');
       outGoList.classList.remove('collapsible');
+      moveList.classList.remove('collapsible');
       documentList.classList.add('collapsible');
       const elem = document.querySelector('.collapsible');
+      // eslint-disable-next-line no-unused-vars
       const instance = M.Collapsible.init(elem, {});
       documentList.innerHTML = '';
       const EntryName = 'Приходная накладная';
@@ -63,7 +68,7 @@ class EntryDocList extends Component {
           
            <tr style="font-size: larger;">
             <td style="border: 0;border-bottom: 2px solid #000;padding-bottom: 0;">Приходная</td>
-            <td id="docNumberEntry_${this.counter}"style="border: 0;border-bottom: 2px solid #000;text-align: center;padding-bottom: 0;"></td>
+            <td id="docNumberEntry_${this.counter}" style="border: 0;border-bottom: 2px solid #000;text-align: center;padding-bottom: 0;"></td>
             <td id="dateEntry_${this.counter}" style="border: 0;border-bottom: 2px solid #000;padding-bottom: 0;"></td>
             <td  style="border: 0;border-bottom: 2px solid #000;padding-bottom: 0;"></td>
             <td style="border: 0;border-bottom: 2px solid #000;padding-bottom: 0;"></td>
@@ -113,7 +118,7 @@ class EntryDocList extends Component {
         const selectCustomer = document.querySelector(`#customer_${this.counter}`);
         const selectStorage = document.querySelector(`#storage_${this.counter}`);
         const selectEntryData = document.querySelector(`#dateEntry_${this.counter}`);
-        const selectDocNumberEntry = document.querySelector(`#docNumberEntry_${this.counter}`)
+        const selectDocNumberEntry = document.querySelector(`#docNumberEntry_${this.counter}`);
         // const selectTable = document.querySelector(`#docTable_${this.counter}`);
         // console.log(selectTable);
         // console.log(documents.length);
@@ -196,6 +201,7 @@ class EntryDocList extends Component {
     tableID = e.target.previousElementSibling.id;
     const tableSelect = document.getElementById(tableID);
     const tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    // eslint-disable-next-line no-useless-concat
     const dataType = 'application/vnd.ms-excel' + '\uFEFF';
     // Specify file name
     fileName = fileName ? `${fileName}.xls` : 'excel_data.xls';

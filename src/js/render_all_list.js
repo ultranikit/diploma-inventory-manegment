@@ -52,6 +52,7 @@ class allRenderList extends Component {
     const contractorBody = document.querySelector('#tbodyContractor');
     const entryDocList = document.querySelector('#entryDocs');
     const outgoDocList = document.querySelector('#outgoDocs');
+    const moveDocList = document.querySelector('#moveDocs');
     const page_title = document.querySelector('.page-title');
     const docFragment = document.createDocumentFragment();
     const locationHash = document.location.hash;
@@ -60,6 +61,7 @@ class allRenderList extends Component {
     const contractor_button_add = document.querySelector('#btn-add-contractor');
     const entry_document_add = document.querySelector('#btn-add-entry-document');
     const outgo_document_add = document.querySelector('#btn-add-outgo-document');
+    const move_document_add = document.querySelector('#btn-add-move-document');
 
     const infoSelect = document.querySelector('#info_search');
     this.dropdownSort.style.display = 'none';
@@ -68,6 +70,8 @@ class allRenderList extends Component {
     entryDocList.hidden = true;
     outgoDocList.innerHTML = '';
     outgoDocList.hidden = true;
+    moveDocList.innerHTML = '';
+    moveDocList.hidden = true;
     contractorBody.innerHTML = '';
     storageBody.innerHTML = '';
     list.innerHTML = '';
@@ -75,6 +79,7 @@ class allRenderList extends Component {
     const newTr = document.querySelector('thead');
     entry_document_add.style.display = 'none';
     outgo_document_add.style.display = 'none';
+    move_document_add.style.display = 'none';
     button_add.style.display = 'none';
     contractor_button_add.style.display = 'none';
     group_add_button.style.display = 'none';
@@ -83,13 +88,16 @@ class allRenderList extends Component {
     if (ourLocation === 'documents') {
       entryDocList.hidden = false;
       outgoDocList.hidden = false;
+      moveDocList.hidden = false;
       page_title.innerText = 'Документы';
       // entryDocList.hidden = false;
       // outgoDocList.hidden = false;
       this.documentsDiv.style.display = 'block';
       this.emit('renderEntryDocuments', allDocs, document);
+      this.emit('renderMoveDocuments', allDocs, document);
       this.emit('renderOutDocuments', allDocs, document);
       entryDocList.classList.add('collapsible');
+      moveDocList.classList.add('collapsible');
     } else if (ourLocation === 'entry_documents') {
       page_title.innerText = 'Приход';
       entryDocList.hidden = false;
@@ -106,8 +114,11 @@ class allRenderList extends Component {
       this.documentsDiv.style.display = 'block';
       this.emit('renderOutDocuments', allDocs, document);
     } else if (ourLocation === 'moves') {
+      page_title.innerText = 'Движение по складам';
+      moveDocList.hidden = false;
+      move_document_add.style.display = 'block';
       this.documentsDiv.style.display = 'block';
-      console.log('wo KAVO');
+      this.emit('renderMoveDocuments', allDocs, document);
     } else if (ourLocation === 'storage') {
       page_title.innerText = 'Склады';
       group_add_button.style.display = 'block';
