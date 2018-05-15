@@ -63,7 +63,7 @@ class ContractorEdit extends Component {
                   <label for="Адрес" data-error="wrong" data-success="right">Адрес</label> 
                 </div> 
               </div> 
-        <div class="modal-footer" style="width:90%"> 
+        <div class="modal-footer" style="width: 90%;position: fixed"> 
           <a class="modal-action modal-close waves-effect waves-green btn-flat">Закрыть</a> 
           <a id="editContractor" class="modal-action modal-close waves-effect waves-green btn-flat">Обновить</a> 
         </div>`;

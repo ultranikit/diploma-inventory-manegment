@@ -188,6 +188,9 @@ span.badge.new {
   .select-wrapper input.select-dropdown {
     font-size: 9px;
   }
+  .stripped {
+    margin-left: -17px;
+  }
   .modal a {
     font-size: 10px;
     width: 102px;
@@ -229,6 +232,9 @@ span.badge.new {
   }
   .select-wrapper input.select-dropdown {
     font-size: 10px;
+  }
+  .stripped {
+    margin-left: -17px;
   }
   .modal a {
     font-size: 10px;

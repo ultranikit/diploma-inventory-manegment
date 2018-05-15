@@ -161,7 +161,7 @@ class EntryDocumentAdd extends Component {
       // '<div id="modalChooseProduct" class="modal modal-fixed-footer">\n' +
       // '</div>\n' +
       '    </div>\n' +
-      '  <div class="modal-footer">\n' +
+      '  <div class="modal-footer" style="width: 90%;position: fixed">\n' +
       '    <a class="modal-action modal-close waves-effect waves-green btn-flat">Закрыть</a>\n' +
       '    <a id="createEntryDocument" class="modal-action modal-close waves-effect waves-green btn-flat">Сохранить</a>\n' +
       '  </div>';

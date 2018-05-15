@@ -95,7 +95,7 @@ class ProductAdd extends Component {
       '      </form>\n' +
       '    </div>\n' +
       '  </div>\n' +
-      '  <div class="modal-footer" style="width: 90%">\n' +
+      '  <div class="modal-footer" style="width: 90%;position: fixed">\n' +
       '    <a class="modal-action modal-close waves-effect waves-green btn-flat">Закрыть</a>\n' +
       '    <a id="createUser" class="modal-action modal-close waves-effect waves-green btn-flat">Добавить</a>\n' +
       '  </div>\n';

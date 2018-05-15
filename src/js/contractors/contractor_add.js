@@ -67,9 +67,9 @@ class ContractorAdd extends Component {
       '            <label for="Адрес" data-error="wrong" data-success="right">Адрес</label>\n' +
       '          </div>\n' +
       '        </div>\n' +
-      '  <div class="modal-footer" style="width:90%">\n' +
-      '    <a class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>\n' +
-      '    <a id="createContractor" class="modal-action modal-close waves-effect waves-green btn-flat">Create</a>\n' +
+      '  <div class="modal-footer" style="width: 90%;position: fixed">\n' +
+      '    <a class="modal-action modal-close waves-effect waves-green btn-flat">Закрыть</a>\n' +
+      '    <a id="createContractor" class="modal-action modal-close waves-effect waves-green btn-flat">Создать</a>\n' +
       '  </div>\n';
 
     const createBtn = document.querySelector('#createContractor');

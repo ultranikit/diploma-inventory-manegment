@@ -61,9 +61,9 @@ class GroupAdd extends Component {
       '            <label for="График" data-error="wrong" data-success="right">График работы</label>\n' +
       '          </div>\n' +
       '        </div>\n' +
-      '  <div class="modal-footer" style="width:90%">\n' +
-      '    <a class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>\n' +
-      '    <a id="createGroup" class="modal-action modal-close waves-effect waves-green btn-flat">Create</a>\n' +
+      '  <div class="modal-footer" style="width: 90%;position: fixed">\n' +
+      '    <a class="modal-action modal-close waves-effect waves-green btn-flat">Закрыть</a>\n' +
+      '    <a id="createGroup" class="modal-action modal-close waves-effect waves-green btn-flat">Создать</a>\n' +
       '  </div>\n';
 
     const createBtn = document.querySelector('#createGroup');
