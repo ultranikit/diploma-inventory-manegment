@@ -37,6 +37,20 @@ class allRenderList extends Component {
       this.emit('renderUserList', this.sortProducts, document);
     });
     this.dropdownSort = document.querySelector('#dropdown-sort');
+
+    const htmlBody = document.querySelector('html');
+    const groupLength = document.querySelector('#filters');
+    for (let i = 0; i < groupLength.children.length; i += 1) {
+      groupLength.children[i].style.backgroundColor = 'transparent';
+      groupLength.children[i].className = ''; // clear class active for all group list;
+      if (htmlBody.clientWidth <= 992 && i < groupLength.children.length - 1) {
+        groupLength.children[i + 1].addEventListener('click', () => {
+          const elem = document.querySelector('.sidenav');
+          const instance = M.Sidenav.getInstance(elem);
+          instance.close();
+        });
+      }
+    }
   }
 
   // eslint-disable-next-line consistent-return
@@ -86,9 +100,6 @@ class allRenderList extends Component {
     this.documentsDiv.style.display = 'none';
     newTr.innerHTML = '';
     if (ourLocation === 'documents') {
-      entryDocList.hidden = false;
-      outgoDocList.hidden = false;
-      moveDocList.hidden = false;
       page_title.innerText = 'Документы';
       // entryDocList.hidden = false;
       // outgoDocList.hidden = false;
@@ -96,29 +107,41 @@ class allRenderList extends Component {
       this.emit('renderEntryDocuments', allDocs, document);
       this.emit('renderMoveDocuments', allDocs, document);
       this.emit('renderOutDocuments', allDocs, document);
+      if (entryDocList.childNodes.length >= 1) {
+        entryDocList.hidden = false;
+      }
+      if (outgoDocList.childNodes.length >= 1) {
+        outgoDocList.hidden = false;
+      }
+      if (moveDocList.childNodes.length >= 1) {
+        moveDocList.hidden = false;
+      }
       entryDocList.classList.add('collapsible');
       moveDocList.classList.add('collapsible');
     } else if (ourLocation === 'entry_documents') {
       page_title.innerText = 'Приход';
-      entryDocList.hidden = false;
-      outgoDocList.hidden = true;
       this.documentsDiv.style.display = 'block';
       entry_document_add.style.display = 'block';
-      console.log(allDocs);
       this.emit('renderEntryDocuments', allDocs, document);
+      if (entryDocList.childNodes.length >= 1) {
+        entryDocList.hidden = false;
+      }
     } else if (ourLocation === 'outcoming_documents') {
       page_title.innerText = 'Расход';
-      outgoDocList.hidden = false;
-      entryDocList.hidden = true;
       outgo_document_add.style.display = 'block';
       this.documentsDiv.style.display = 'block';
       this.emit('renderOutDocuments', allDocs, document);
+      if (outgoDocList.childNodes.length >= 1) {
+        outgoDocList.hidden = false;
+      }
     } else if (ourLocation === 'moves') {
       page_title.innerText = 'Движение по складам';
-      moveDocList.hidden = false;
       move_document_add.style.display = 'block';
       this.documentsDiv.style.display = 'block';
       this.emit('renderMoveDocuments', allDocs, document);
+      if (moveDocList.childNodes.length >= 1) {
+        moveDocList.hidden = false;
+      }
     } else if (ourLocation === 'storage') {
       page_title.innerText = 'Склады';
       group_add_button.style.display = 'block';
@@ -260,21 +283,12 @@ class allRenderList extends Component {
     // search function for products end
   }
   location(e) {
-    const htmlBody = document.querySelector('html');
-    const additionsList = document.querySelector('#additions');
     const products = JSON.parse(localStorage.getItem('userHash'));
     const additionUl = document.querySelector('#docList');
     const groupLength = document.querySelector('#filters');
     for (let i = 0; i < groupLength.children.length; i += 1) {
       groupLength.children[i].style.backgroundColor = 'transparent';
       groupLength.children[i].className = ''; // clear class active for all group list;
-      if (htmlBody.clientWidth <= 992 && i < groupLength.children.length - 1) {
-        groupLength.children[i + 1].addEventListener('click', () => {
-          const elem = document.querySelector('.sidenav');
-          const instance = M.Sidenav.getInstance(elem);
-          instance.close();
-        });
-      }
     }
     for (let i = 0; i < additionUl.childElementCount; i += 1) {
       additionUl.children[i].style.backgroundColor = 'transparent';

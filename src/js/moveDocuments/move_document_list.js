@@ -56,6 +56,7 @@ class MoveDocList extends Component {
         exportHtmlToExcel.id = 'exportToExcel';
         exportHtmlToExcel.className = 'waves-effect waves-green btn-flat';
         exportHtmlToExcel.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+        exportHtmlToExcel.style.marginTop = '10px';
         exportHtmlToExcel.innerText = 'Экспортировать в Excel';
         const entryInfoTable = document.createElement('tbody');
         tableThead.innerHTML = `
@@ -68,6 +69,7 @@ class MoveDocList extends Component {
             <td style="border: 0;border-bottom: 2px solid #000;padding-bottom: 0;"></td>
             </tr>
           `;
+        entryInfoTable.id = 'moveTd';
         entryInfoTable.innerHTML =
           `
        <tr>
@@ -149,7 +151,7 @@ class MoveDocList extends Component {
             selectEntryData.innerHTML = `${item.date}`;
           }
         });
-        const docTable = document.querySelector(`#docTableMove_${this.counter}`);
+        // const docTable = document.querySelector(`#docTableMove_${this.counter}`);
         const freeTr = document.createElement('tr');
         const fullSum = document.createElement('td');
         fullSum.style.border = '1px solid #000';
@@ -160,8 +162,36 @@ class MoveDocList extends Component {
           freeTd.style.border = '0';
           freeTr.appendChild(freeTd);
         }
+        const sendGet = document.createElement('tr');
+        for (let k = 0; k <= 3; k += 1) {
+          const freeTd = document.createElement('td');
+          freeTd.style.textAlign = 'left';
+          freeTd.style.fontWeight = '500';
+          if (k === 0) {
+            const textSpan = document.createElement('span');
+            textSpan.style.position = 'relative';
+            textSpan.style.top = '10px';
+            textSpan.innerText = 'Отгрузил(ла):';
+            freeTd.style.border = '0';
+            freeTd.style.borderBottom = '1px solid #000';
+            freeTd.appendChild(textSpan);
+          } else if (k === 2) {
+            const textSpan = document.createElement('span');
+            textSpan.style.position = 'relative';
+            textSpan.style.top = '10px';
+            textSpan.innerText = 'Получил(ла):';
+            freeTd.style.border = '0';
+            freeTd.style.borderBottom = '1px solid #000';
+            freeTd.appendChild(textSpan);
+          } else if (k === 3) {
+            freeTd.style.border = '0';
+            freeTd.style.borderBottom = '1px solid #000';
+          } else freeTd.style.border = '0';
+          sendGet.appendChild(freeTd);
+        }
         freeTr.appendChild(fullSum);
-        docTable.appendChild(freeTr);
+        tableTbody.appendChild(freeTr);
+        tableTbody.appendChild(sendGet);
         elementDivHeader.appendChild(elementSpan);
         documentList.appendChild(docFragment);
         this.fullQuantity = 0;
