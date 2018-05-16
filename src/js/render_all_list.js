@@ -43,7 +43,7 @@ class allRenderList extends Component {
     for (let i = 0; i < groupLength.children.length; i += 1) {
       groupLength.children[i].style.backgroundColor = 'transparent';
       groupLength.children[i].className = ''; // clear class active for all group list;
-      if (htmlBody.clientWidth <= 992 && i < groupLength.children.length - 1) {
+      if (htmlBody.clientWidth <= 1300 && i < groupLength.children.length - 1) {
         groupLength.children[i + 1].addEventListener('click', () => {
           const elem = document.querySelector('.sidenav');
           const instance = M.Sidenav.getInstance(elem);
