@@ -171,6 +171,46 @@ span.badge.new {
   width: 33%;
 }
 
+@-moz-document url-prefix() {
+
+  .sidenav li {
+    max-width: 295px;
+  }
+  .sidenav li a {
+    max-width: 250px;
+  }
+  .sidenav li.active {
+    max-width: 295px;
+  }
+  .sidenav li.active a {
+    max-width: 295px;
+  }
+
+  @media only screen and (min-width: 400px) {
+    #filters {
+      max-width: 38%;
+    }
+    .sidenav li {
+      max-width: 300px;
+    }
+    .sidenav li a {
+      max-width: 300px;
+    }
+  }
+  @media only screen and (min-width: 932px) {
+    #filters {
+      max-width: 31%;
+    }
+    .sidenav li {
+      max-width: 300px;
+    }
+    .sidenav li a {
+      max-width: 300px;
+    }
+  }
+}
+
+
 @media only screen and (max-width: 400px) {
   html {
     font-size: 8px;

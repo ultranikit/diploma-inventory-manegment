@@ -41,13 +41,27 @@ class allRenderList extends Component {
     const htmlBody = document.querySelector('html');
     const groupLength = document.querySelector('#filters');
     for (let i = 0; i < groupLength.children.length; i += 1) {
-      groupLength.children[i].style.backgroundColor = 'transparent';
-      groupLength.children[i].className = ''; // clear class active for all group list;
-      if (htmlBody.clientWidth <= 1300 && i < groupLength.children.length - 1) {
+      if (i < groupLength.children.length - 1) {
         groupLength.children[i + 1].addEventListener('click', () => {
+          const mobileMenu = document.querySelector('.sidenav-trigger');
           const elem = document.querySelector('.sidenav');
           const instance = M.Sidenav.getInstance(elem);
-          instance.close();
+          console.log(elem.style.transform);
+          if (htmlBody.clientHeight === 768 && htmlBody.clientWidth === 1024) {
+            instance.open();
+          } else if (htmlBody.clientHeight === 1024 && htmlBody.clientWidth === 768) {
+            instance.close();
+          } else if (htmlBody.clientHeight === 1024 && htmlBody.clientWidth === 1366) {
+            instance.open();
+          } else if (htmlBody.clientHeight === 1366 && htmlBody.clientWidth === 1024) {
+            instance.open();
+          } else if (htmlBody.clientHeight <= 824 && htmlBody.clientWidth <= 414) {
+            instance.close();
+          } else if (htmlBody.clientHeight <= 414 && htmlBody.clientWidth <= 812) {
+            instance.close();
+          } else if (elem.style.transform === 'translateX(0px)' || 'translateX(0%)') {
+            instance.open();
+          } else instance.close();
         });
       }
     }
@@ -283,6 +297,7 @@ class allRenderList extends Component {
     // search function for products end
   }
   location(e) {
+    const htmlBody = document.querySelector('html');
     const products = JSON.parse(localStorage.getItem('userHash'));
     const additionUl = document.querySelector('#docList');
     const groupLength = document.querySelector('#filters');
