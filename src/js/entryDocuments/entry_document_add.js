@@ -194,14 +194,6 @@ class EntryDocumentAdd extends Component {
     this.changeProducts = [];
     const datePickerModal = document.querySelector('.datepicker-modal');
     datePickerModal.style.position = 'fixed';
-    datePickerModal.style.top = '-15%';
-    datePickerModal.style.height = '410px';
-    datePickerModal.style.width = '600px';
-    const html = document.querySelector('html');
-    if (html.clientWidth < 414) {
-      datePickerModal.style.height = '100%';
-      datePickerModal.style.width = '300px';
-    }
 
     const modalOpened = document.querySelector('.open');
     // modalOpened.style.width = '60%';

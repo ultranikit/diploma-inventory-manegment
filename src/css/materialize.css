@@ -8606,6 +8606,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 
 /* Modal */
 .datepicker-modal {
+  height: 100vh;
   max-width: 325px;
   min-width: 300px;
   max-height: none;
@@ -8768,7 +8769,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 
 /* Footer */
 .datepicker-footer {
-  width: 280px;
+  width: 300px;
   margin: 0 auto;
   padding-bottom: 5px;
   display: -webkit-box;
@@ -8808,6 +8809,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
   .datepicker-table,
   .datepicker-footer {
     width: 320px;
+    height: 22px;
   }
   .datepicker-day-button {
     line-height: 44px;
