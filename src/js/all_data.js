@@ -20,16 +20,16 @@ class AllData extends Component {
     } else {
       this.ClearSelectedMenu();
       this.products = [{
-        product_name: 'tov1', product_number: 21, storage_id: 2, storage_name: 'sklad 2', user_id: 334, vendor_code: '12',
+        product_name: 'tov1', product_number: 21, storage_id: 2, storage_name: 'sklad 2', product_id: 334, vendor_code: '12',
       },
       {
-        product_name: 'tov2', product_number: 22, storage_id: 3, storage_name: 'sklad 3', user_id: 34, vendor_code: '432325',
+        product_name: 'tov2', product_number: 22, storage_id: 3, storage_name: 'sklad 3', product_id: 34, vendor_code: '432325',
       },
       {
-        product_name: 'tov3', product_number: 23, storage_id: 3, storage_name: 'sklad 3', user_id: 3324, vendor_code: '332124',
+        product_name: 'tov3', product_number: 23, storage_id: 3, storage_name: 'sklad 3', product_id: 3324, vendor_code: '332124',
       },
       {
-        product_name: 'tov4', product_number: 45, storage_id: 3, storage_name: 'sklad 3', user_id: 33224, vendor_code: '14552',
+        product_name: 'tov4', product_number: 45, storage_id: 3, storage_name: 'sklad 3', product_id: 33224, vendor_code: '14552',
       }];
 
       this.storage = [{
@@ -53,7 +53,7 @@ class AllData extends Component {
       localStorage.setItem('userHash', JSON.stringify(this.products));
       this.storage.sort((a, b) => a.id - b.id);
       localStorage.setItem('groupList', JSON.stringify(this.storage));
-      this.contracors.sort((a, b) => a.user_id - b.user_id);
+      this.contracors.sort((a, b) => a.product_id - b.product_id);
       localStorage.setItem('contractorList', JSON.stringify(this.contracors));
       this.emit('renderUserList', this.products, document);
       // this.emit('socket', this.products, document);
@@ -86,7 +86,7 @@ class AllData extends Component {
       .then((contractor) => {
         // console.log(users);
         this.contracors = JSON.parse(contractor);
-        this.contracors.sort((a, b) => a.user_id - b.user_id);
+        this.contracors.sort((a, b) => a.product_id - b.product_id);
         localStorage.setItem('contractorList', JSON.stringify(this.contracors));
         // console.log(this.products);
         // this.emit('renderContractorList', this.products, document);

@@ -32,22 +32,14 @@ class EntryDocumentAdd extends Component {
       const storage = JSON.parse(localStorage.getItem('groupList'));
       const allDocList = JSON.parse(localStorage.getItem('allDocuments'));
       const contractor = document.querySelector('.contractor').querySelector('.selected').innerText;
-      // console.log(contractor);
       let entryDocNumber = document.querySelector('#entry_document_number').value;
       entryDocNumber = Number(entryDocNumber);
-      // console.log(entryDocNumber);
       const customer = document.querySelector('#customer').value;
-      // console.log(customer);
       const entryData = document.querySelector('#entry_data').value;
-      // console.log(entryData);
       const selectedStorage = document.querySelector('.storage').querySelector('.selected').innerText;
-      // console.log(selectedStorage);
       const findStorage = storage.find(store => store.name === selectedStorage);
       const storageId = findStorage.id;
-      // console.log(storageId);
       const storageName = findStorage.name;
-      // console.log(findStorage);
-      // console.log(productTable);
       this.editNewProducts.forEach((product) => {
         product.document_number = this.documentNumber;
         product.document = 1;
@@ -56,14 +48,7 @@ class EntryDocumentAdd extends Component {
         product.customer = customer;
         product.date = `${entryData}`;
         product.storage_id = storageId;
-        // console.log(product.storage_id);
         product.storage_name = storageName;
-      // console.log(product);
-      // const findProd = products.find(item => (item.product_name === product.product_name && item.storage_name === product.storage_name));
-      // // console.log(findProd);
-      // if (findProd) {
-      //   product.user_id = findProd.user_id;
-      // }
       });
       this.documents = this.documents.concat(this.editNewProducts);
       if (allDocList !== null) {
@@ -72,29 +57,16 @@ class EntryDocumentAdd extends Component {
       // console.log(this.documents);
       localStorage.setItem('allDocuments', JSON.stringify(this.documents));
       this.emit('renderEntryDocuments', this.documents, document);
-      // console.log(this.allAddedProducts);
-      // console.log(this.changeProducts);
       this.changeProducts.forEach((product) => {
         const products = JSON.parse(localStorage.getItem('userHash'));
-        // product.document_number = this.documentNumber;
-        // product.document = 1;
-        // product.entry_number = entryDocNumber;
-        // product.contractor = contractor;
-        // product.customer = customer;
-        // product.date = `${entryData}`;
-        // product.storage_id = storageId;
-        // console.log(product.storage_id);
-        // product.storage_name = storageName;
-
-        // console.log(product);
         const findProd = products.find(item => (item.product_name === product.product_name && item.storage_name === product.storage_name));
         // console.log(findProd);
         if (findProd) {
-          product.user_id = findProd.user_id;
+          product.product_id = findProd.product_id;
           product.product_number += findProd.product_number;
           this.emit('editProduct', product, document);
         } else {
-          product.user_id = Math.max(...products.map(item => item.user_id)) + 1;
+          product.product_id = Math.max(...products.map(item => item.product_id)) + 1;
           this.emit('editProduct', product, document);
         }
       // console.log(product);
@@ -225,6 +197,11 @@ class EntryDocumentAdd extends Component {
     datePickerModal.style.top = '-15%';
     datePickerModal.style.height = '410px';
     datePickerModal.style.width = '600px';
+    const html = document.querySelector('html');
+    if (html.clientWidth < 414) {
+      datePickerModal.style.height = '100%';
+      datePickerModal.style.width = '300px';
+    }
 
     const modalOpened = document.querySelector('.open');
     // modalOpened.style.width = '60%';
@@ -309,7 +286,7 @@ class EntryDocumentAdd extends Component {
       this.products.forEach((item) => {
         item.completed = false;
         insetList.innerHTML +=
-          `<tr id="${item.user_id}">
+          `<tr id="${item.product_id}">
            <td>${item.product_name}</td>
            <td><input type="checkbox" class="filled-in" /></td>
           </tr>`;
@@ -341,9 +318,9 @@ class EntryDocumentAdd extends Component {
       } else {
         this.addCount = this.count;
       }
-      const user_id = Math.round(Math.random() * 1000);
+      const product_id = Math.round(Math.random() * 1000);
       tableProd.innerHTML +=
-        `<tr id="${user_id}">
+        `<tr id="${product_id}">
               <td>${this.addCount += 1}</td>
               <td id="prod_name" style="white-space: nowrap">впишите имя</td>
               <td  id="quantity_${this.addCount}" >0</td>
@@ -352,7 +329,7 @@ class EntryDocumentAdd extends Component {
           </tr>`;
       const product_name = document.querySelector('#prod_name').innerText;
       const newProdData = {
-        user_id,
+        product_id,
         vendor_code: '0',
         product_name,
         storage_name: 'some',
@@ -370,7 +347,7 @@ class EntryDocumentAdd extends Component {
       this.td = myEdit.target;
       this.prodId = Number(myEdit.target.parentElement.id);
       // console.log(this.prodId);
-      const findNewProd = this.allAddedProducts.find(product => this.prodId === product.user_id);
+      const findNewProd = this.allAddedProducts.find(product => this.prodId === product.product_id);
       const indexNewProd = this.allAddedProducts.indexOf(findNewProd);
       this.td.setAttribute('contenteditable', 'true');
       // console.log(this.td);
@@ -404,8 +381,8 @@ class EntryDocumentAdd extends Component {
     // console.log(trItemId);
     const checkboxStatus = e.target;
     // console.log(checkboxStatus);
-    const findProduct = this.products.find(item => item.user_id === trItemId);
-    const index = this.products.indexOf(this.products.find(item => item.user_id === trItemId));
+    const findProduct = this.products.find(item => item.product_id === trItemId);
+    const index = this.products.indexOf(this.products.find(item => item.product_id === trItemId));
     try {
       if (!checkboxStatus.checked) {
         findProduct.completed = false;
@@ -439,7 +416,7 @@ class EntryDocumentAdd extends Component {
     this.newList.forEach((item) => {
       if (item.completed) {
         addToTable.innerHTML +=
-          `<tr id="${item.user_id}">
+          `<tr id="${item.product_id}">
               <td>${this.count += 1}</td>
               <td>${item.product_name}</td>
               <td id="quantity_${this.count}">0</td>

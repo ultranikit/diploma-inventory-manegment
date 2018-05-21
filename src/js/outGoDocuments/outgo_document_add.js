@@ -62,7 +62,7 @@ class OutGoDocumentAdd extends Component {
         // const findProd = products.find(item => (item.product_name === product.product_name && item.storage_name === product.storage_name));
         // // console.log(findProd);
         // if (findProd) {
-        //   product.user_id = findProd.user_id;
+        //   product.product_id = findProd.product_id;
         // }
       });
       this.documents = this.documents.concat(this.editNewProducts);
@@ -79,7 +79,7 @@ class OutGoDocumentAdd extends Component {
         const findProd = products.find(item => (item.product_name === product.product_name && item.storage_name === product.storage_name));
         // console.log(findProd);
         if (findProd) {
-          product.user_id = findProd.user_id;
+          product.product_id = findProd.product_id;
           product.product_number = findProd.product_number - product.product_number;
           this.emit('editProduct', product, document);
         }
@@ -203,6 +203,11 @@ class OutGoDocumentAdd extends Component {
     datePickerModal.style.top = '-15%';
     datePickerModal.style.height = '410px';
     datePickerModal.style.width = '600px';
+    const html = document.querySelector('html');
+    if (html.clientWidth < 414) {
+      datePickerModal.style.height = '100%';
+      datePickerModal.style.width = '300px';
+    }
 
     const modalOpened = document.querySelector('.open');
     // modalOpened.style.width = '60%';
@@ -274,7 +279,7 @@ class OutGoDocumentAdd extends Component {
       this.products.forEach((item) => {
         item.completed = false;
         insetList.innerHTML +=
-          `<tr id="${item.user_id}">
+          `<tr id="${item.product_id}">
            <td>${item.product_name}</td>
            <td>${item.product_number}</td>
            <td><input type="checkbox" class="filled-in" /></td>
@@ -306,7 +311,7 @@ class OutGoDocumentAdd extends Component {
       this.td = myEdit.target;
       this.prodId = Number(myEdit.target.parentElement.id);
       // console.log(this.prodId);
-      const findNewProd = this.allAddedProducts.find(product => this.prodId === product.user_id);
+      const findNewProd = this.allAddedProducts.find(product => this.prodId === product.product_id);
       const indexNewProd = this.allAddedProducts.indexOf(findNewProd);
       // console.log(findNewProd);
       // console.log(indexNewProd);
@@ -343,8 +348,8 @@ class OutGoDocumentAdd extends Component {
     // console.log(trItemId);
     const checkboxStatus = e.target;
     // console.log(checkboxStatus);
-    const findProduct = this.products.find(item => item.user_id === trItemId);
-    const index = this.products.indexOf(this.products.find(item => item.user_id === trItemId));
+    const findProduct = this.products.find(item => item.product_id === trItemId);
+    const index = this.products.indexOf(this.products.find(item => item.product_id === trItemId));
     try {
       if (!checkboxStatus.checked) {
         findProduct.completed = false;
@@ -378,7 +383,7 @@ class OutGoDocumentAdd extends Component {
     this.newList.forEach((item) => {
       if (item.completed) {
         addToTable.innerHTML +=
-          `<tr id="${item.user_id}">
+          `<tr id="${item.product_id}">
               <td>${this.count += 1}</td>
               <td>${item.product_name}</td>
               <td id="quantity_${this.count}">0</td>

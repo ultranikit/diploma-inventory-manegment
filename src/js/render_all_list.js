@@ -57,7 +57,7 @@ class allRenderList extends Component {
             instance.open();
           } else if (htmlBody.clientHeight <= 824 && htmlBody.clientWidth <= 414) {
             instance.close();
-          } else if (htmlBody.clientHeight <= 414 && htmlBody.clientWidth <= 812) {
+          } else if (htmlBody.clientWidth <= 824) {
             instance.close();
           } else if (elem.style.transform === 'translateX(0px)' || 'translateX(0%)') {
             instance.open();
@@ -226,7 +226,7 @@ class allRenderList extends Component {
         if (item.product_number < 0) {
           product_number.style.backgroundColor = 'rgba(255, 15, 15, 0.15)';
         }
-        trItem.id = item.user_id;
+        trItem.id = item.product_id;
         vendor_code.innerText = item.vendor_code;
         product_name.innerText = item.product_name;
         storage_name.innerText = item.storage_name;
@@ -290,14 +290,13 @@ class allRenderList extends Component {
       console.log(keyPress);
       this.searchString += keyPress;
       this.searchString = this.searchString.toLowerCase();
-      this.sortedArray = updateProducts.filter(item => item.vendor_code.toString().indexOf(this.searchString) > -1 || item.product_name.indexOf(this.searchString) > -1);
+      this.sortedArray = updateProducts.filter(item => item.vendor_code.toString().indexOf(this.searchString) > -1 || item.product_name.toLowerCase().indexOf(this.searchString) > -1);
       this.sortedArray.sort((a, b) => a.vendor_code - b.vendor_code);
       this.emit('renderUserList', this.sortedArray, document);
     }
     // search function for products end
   }
   location(e) {
-    const htmlBody = document.querySelector('html');
     const products = JSON.parse(localStorage.getItem('userHash'));
     const additionUl = document.querySelector('#docList');
     const groupLength = document.querySelector('#filters');
@@ -312,6 +311,10 @@ class allRenderList extends Component {
     e.currentTarget.document.activeElement.parentElement.className = 'active';
     e.currentTarget.document.activeElement.parentElement.style.backgroundColor = '#ee6e73';
     e.currentTarget.document.activeElement.parentElement.style.color = '#fff';
+    const htmlBody = document.querySelector('html');
+    htmlBody.classList.remove('active');
+    htmlBody.style.backgroundColor = '#fff';
+    htmlBody.style.color = '#000';
     // products.sort((a, b) => a.product_name.localeCompare(b.product_name));
     products.sort((a, b) => a.storage_id - b.storage_id);
     this.emit('renderUserList', products, document);
@@ -320,7 +323,7 @@ class allRenderList extends Component {
     // console.log(e.currentTarget.parentElement.id);
     const getId = Number(e.currentTarget.parentElement.id);
     const goods = JSON.parse(localStorage.getItem('userHash'));
-    const index = goods.indexOf(goods.find(item => item.user_id === getId));
+    const index = goods.indexOf(goods.find(item => item.product_id === getId));
     // console.log(index);
     goods.splice(index, 1);
     localStorage.setItem('userHash', JSON.stringify(goods));

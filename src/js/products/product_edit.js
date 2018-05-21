@@ -8,7 +8,7 @@ class ProductEdit extends Component {
   }
 
   editProduct() {
-    let user_id = Number(document.querySelector('#user_edit_id').innerText);
+    let product_id = Number(document.querySelector('#user_edit_id').innerText);
     const vendor_code = document.querySelector('#vendor_code').value;
     const product_name = document.querySelector('#product_name').value;
     let product_number = document.querySelector('#product_number').value;
@@ -18,7 +18,7 @@ class ProductEdit extends Component {
     let products = JSON.parse(localStorage.getItem('userHash'));
     const group = document.querySelector('#modalEdit').querySelector('.storage').querySelector('.selected');
     const storage = JSON.parse(localStorage.getItem('groupList'));
-    const findProduct = products.find(product => product.user_id === user_id);
+    const findProduct = products.find(product => product.product_id === product_id);
     const find_group = storage.find(item => item.name === group.innerText);
     const check_storage_id = find_group.id;
     let storage_id = findProduct.storage_id;
@@ -46,7 +46,7 @@ class ProductEdit extends Component {
 
     // console.log(this.check);
     const data = {
-      user_id,
+      product_id,
       storage_id,
       vendor_code,
       product_name,
@@ -59,7 +59,7 @@ class ProductEdit extends Component {
       // console.log(findProductNew);
       product_number = Number(product_number_move) + findProductNew.product_number;
       this.dataMoveProduct = {
-        user_id: findProductNew.user_id,
+        product_id: findProductNew.product_id,
         storage_id: findProductNew.storage_id,
         vendor_code: findProductNew.vendor_code,
         product_name,
@@ -68,12 +68,12 @@ class ProductEdit extends Component {
       };
       this.emit('editProduct', this.dataMoveProduct, document);
     } else if (findProduct.storage_id !== check_storage_id) {
-      user_id = Math.max(...products.map(item => item.user_id)) + 1;
+      product_id = Math.max(...products.map(item => item.product_id)) + 1;
       storage_id = check_storage_id;
       storage_name = find_group.name;
       product_number = Number(product_number_move);
       this.dataMoveProduct = {
-        user_id,
+        product_id,
         storage_id,
         vendor_code,
         product_name,
@@ -128,7 +128,7 @@ class ProductEdit extends Component {
       '  </div>';
 
     const updateBtn = document.querySelector('#EditUser');
-    const user_id = document.querySelector('#user_edit_id');
+    const product_id = document.querySelector('#user_edit_id');
     const vendor_code = document.querySelector('#vendor_code');
     const product_name = document.querySelector('#product_name');
     const product_number = document.querySelector('#product_number');
@@ -154,7 +154,7 @@ class ProductEdit extends Component {
     if (storageSelect.innerText === 'Выбирете склад') {
       updateBtn.setAttribute('disabled', '');
     }
-    const obj = products.find(product => product.user_id === Number(e.target.parentElement.id));
+    const obj = products.find(product => product.product_id === Number(e.target.parentElement.id));
 
     this.oldProdName = obj.product_name;
     console.log(this.oldProdName);
@@ -168,7 +168,7 @@ class ProductEdit extends Component {
     product_number.classList.add('valid');
     product_number.nextElementSibling.className = 'active';
 
-    user_id.innerText = obj.user_id;
+    product_id.innerText = obj.product_id;
     vendor_code.value = obj.vendor_code;
     product_name.value = obj.product_name;
     product_number.value = obj.product_number;

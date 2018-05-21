@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JavaScript-modules-diagram</ID>
+  <OriginalElement>C:/Users/ultra/Desktop/диплом/src</OriginalElement>
+  <nodes>
+    <node x="2341.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/all_data.js#Component#7;</node>
+    <node x="0.0" y="748.0">C:/Users/ultra/Desktop/диплом/dist/bundle.js</node>
+    <node x="324.0" y="748.0">C:/Users/ultra/Desktop/диплом/src/css/common.css</node>
+    <node x="1814.0" y="0.0">C:/Users/ultra/Desktop/диплом/src/js/component.js</node>
+    <node x="2133.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/contractors/contractor_add.js#Component#61;</node>
+    <node x="2499.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/contractors/contractor_edit.js#Component#38;</node>
+    <node x="1320.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/contractors/contractor_list.js#Component#61;</node>
+    <node x="0.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/entryDocuments/entry_document_add.js#Component#103;</node>
+    <node x="3332.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/entryDocuments/entry_document_list.js#Component#69;</node>
+    <node x="268.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/storage/group_add.js#Component#38;</node>
+    <node x="1974.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/storage/group_list.js#Component#38;</node>
+    <node x="330.5" y="827.0">C:/Users/ultra/Desktop/диплом/src/index.html</node>
+    <node x="1779.5" y="300.0">C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;</node>
+    <node x="598.0" y="748.0">C:/Users/ultra/Desktop/диплом/src/css/materialize.css</node>
+    <node x="465.0" y="748.0">C:/Users/ultra/Desktop/диплом/src/js/materialize.js</node>
+    <node x="1523.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/moveDocuments/move_document_list.js#Component#86;</node>
+    <node x="785.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/moveDocuments/move_product_add.js#Component#113;</node>
+    <node x="3053.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/outGoDocuments/outgo_document_add.js#Component#103;</node>
+    <node x="1046.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/outGoDocuments/outgo_document_list.js#Component#86;</node>
+    <node x="1792.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/products/product_add.js#Component#61;</node>
+    <node x="2707.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/product_details_store.js#Component#69;</node>
+    <node x="432.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/products/product_edit.js#Component#108;</node>
+    <node x="2895.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/render_all_list.js#Component#69;</node>
+    <node x="614.0" y="139.0">C:/Users/ultra/Desktop/диплом/src/js/storage/storage_edit.js#Component#61;</node>
+    <node x="124.0" y="748.0">https://fonts.googleapis.com/icon?family=Material+Icons</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/products/product_add.js#Component#61;">
+      <point x="0.0" y="-201.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/product_details_store.js#Component#69;">
+      <point x="55.0" y="-201.5" />
+      <point x="1928.0" y="250.0" />
+      <point x="2791.0" y="250.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/contractors/contractor_edit.js#Component#38;">
+      <point x="44.0" y="-201.5" />
+      <point x="1917.0" y="240.0" />
+      <point x="2593.0" y="240.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/contractors/contractor_add.js#Component#61;">
+      <point x="22.0" y="-201.5" />
+      <point x="1895.0" y="220.0" />
+      <point x="2227.0" y="220.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/moveDocuments/move_document_list.js#Component#86;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="1647.5" y="119.0" />
+      <point x="1866.0588235294117" y="119.0" />
+      <point x="-6.941176470588232" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/render_all_list.js#Component#69;">
+      <point x="66.0" y="-201.5" />
+      <point x="1939.0" y="260.0" />
+      <point x="2964.0" y="260.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/all_data.js#Component#7;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="2410.0" y="99.0" />
+      <point x="1893.8235294117646" y="99.0" />
+      <point x="20.823529411764696" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/render_all_list.js#Component#69;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="2964.0" y="69.0" />
+      <point x="1914.6470588235293" y="69.0" />
+      <point x="41.64705882352939" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/product_details_store.js#Component#69;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="2791.0" y="79.0" />
+      <point x="1907.7058823529412" y="79.0" />
+      <point x="34.70588235294116" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/storage/storage_edit.js#Component#61;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="689.5" y="79.0" />
+      <point x="1838.2941176470588" y="79.0" />
+      <point x="-34.70588235294116" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/moveDocuments/move_product_add.js#Component#113;">
+      <point x="-44.0" y="-201.5" />
+      <point x="1829.0" y="240.0" />
+      <point x="905.5" y="240.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/outGoDocuments/outgo_document_list.js#Component#86;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="1173.0" y="99.0" />
+      <point x="1852.1764705882354" y="99.0" />
+      <point x="-20.823529411764696" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/entryDocuments/entry_document_list.js#Component#69;">
+      <point x="88.0" y="-201.5" />
+      <point x="1961.0" y="280.0" />
+      <point x="3453.5" y="280.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/entryDocuments/entry_document_add.js#Component#103;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="124.0" y="49.0" />
+      <point x="1817.4705882352941" y="49.0" />
+      <point x="-55.529411764705856" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/storage/group_list.js#Component#38;">
+      <point x="11.0" y="-201.5" />
+      <point x="1884.0" y="210.0" />
+      <point x="2043.5" y="210.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/storage/group_add.js#Component#38;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="340.0" y="59.0" />
+      <point x="1824.4117647058824" y="59.0" />
+      <point x="-48.588235294117624" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/all_data.js#Component#7;">
+      <point x="33.0" y="-201.5" />
+      <point x="1906.0" y="230.0" />
+      <point x="2410.0" y="230.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/outGoDocuments/outgo_document_add.js#Component#103;">
+      <point x="77.0" y="-201.5" />
+      <point x="1950.0" y="270.0" />
+      <point x="3182.5" y="270.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/products/product_add.js#Component#61;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/products/product_edit.js#Component#108;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="513.0" y="69.0" />
+      <point x="1831.3529411764707" y="69.0" />
+      <point x="-41.64705882352939" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/contractors/contractor_add.js#Component#61;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="2227.0" y="109.0" />
+      <point x="1886.8823529411766" y="109.0" />
+      <point x="13.882352941176464" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/contractors/contractor_list.js#Component#61;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="1411.5" y="109.0" />
+      <point x="1859.1176470588234" y="109.0" />
+      <point x="-13.882352941176464" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/index.html" target="C:/Users/ultra/Desktop/диплом/src/css/materialize.css">
+      <point x="43.19999999999999" y="-14.5" />
+      <point x="427.7" y="807.0" />
+      <point x="662.5" y="807.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/storage/storage_edit.js#Component#61;">
+      <point x="-55.0" y="-201.5" />
+      <point x="1818.0" y="250.0" />
+      <point x="689.5" y="250.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/contractors/contractor_list.js#Component#61;">
+      <point x="-22.0" y="-201.5" />
+      <point x="1851.0" y="220.0" />
+      <point x="1411.5" y="220.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/storage/group_add.js#Component#38;">
+      <point x="-77.0" y="-201.5" />
+      <point x="1796.0" y="270.0" />
+      <point x="340.0" y="270.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/entryDocuments/entry_document_list.js#Component#69;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="3453.5" y="49.0" />
+      <point x="1928.5294117647059" y="49.0" />
+      <point x="55.529411764705856" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/index.html" target="C:/Users/ultra/Desktop/диплом/src/js/materialize.js">
+      <point x="21.600000000000023" y="-14.5" />
+      <point x="406.1" y="797.0" />
+      <point x="521.5" y="797.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/index.html" target="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <point x="-21.600000000000023" y="-14.5" />
+      <point x="362.9" y="797.0" />
+      <point x="214.0" y="797.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/index.html" target="C:/Users/ultra/Desktop/диплом/dist/bundle.js">
+      <point x="-43.19999999999999" y="-14.5" />
+      <point x="341.3" y="807.0" />
+      <point x="52.0" y="807.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/contractors/contractor_edit.js#Component#38;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="2593.0" y="89.0" />
+      <point x="1900.764705882353" y="89.0" />
+      <point x="27.764705882352928" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/storage/group_list.js#Component#38;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="2043.5" y="119.0" />
+      <point x="1879.9411764705883" y="119.0" />
+      <point x="6.941176470588232" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/outGoDocuments/outgo_document_list.js#Component#86;">
+      <point x="-33.0" y="-201.5" />
+      <point x="1840.0" y="230.0" />
+      <point x="1173.0" y="230.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/outGoDocuments/outgo_document_add.js#Component#103;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="3182.5" y="59.0" />
+      <point x="1921.5882352941176" y="59.0" />
+      <point x="48.588235294117624" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/entryDocuments/entry_document_add.js#Component#103;">
+      <point x="-88.0" y="-201.5" />
+      <point x="1785.0" y="280.0" />
+      <point x="124.0" y="280.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/moveDocuments/move_document_list.js#Component#86;">
+      <point x="-11.0" y="-201.5" />
+      <point x="1862.0" y="210.0" />
+      <point x="1647.5" y="210.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/index.html" target="C:/Users/ultra/Desktop/диплом/src/css/common.css">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/js/moveDocuments/move_product_add.js#Component#113;" target="C:/Users/ultra/Desktop/диплом/src/js/component.js">
+      <point x="0.0" y="-25.5" />
+      <point x="905.5" y="89.0" />
+      <point x="1845.235294117647" y="89.0" />
+      <point x="-27.764705882352928" y="14.5" />
+    </edge>
+    <edge source="C:/Users/ultra/Desktop/диплом/src/main.js#AllData#7;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorAdd#467;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorEdit#528;C:/Users/ultra/Desktop/диплом/src/main.js#ContractorList#404;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocList#662;C:/Users/ultra/Desktop/диплом/src/main.js#EntryDocumentAdd#591;C:/Users/ultra/Desktop/диплом/src/main.js#GroupAdd#304;C:/Users/ultra/Desktop/диплом/src/main.js#GroupList#44;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocList#936;C:/Users/ultra/Desktop/диплом/src/main.js#MoveDocumentAdd#869;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocList#801;C:/Users/ultra/Desktop/диплом/src/main.js#OutGoDocumentAdd#730;C:/Users/ultra/Desktop/диплом/src/main.js#ProductAdd#143;C:/Users/ultra/Desktop/диплом/src/main.js#ProductEdit#195;C:/Users/ultra/Desktop/диплом/src/main.js#ProductStore#249;C:/Users/ultra/Desktop/диплом/src/main.js#StorageEdit#351;C:/Users/ultra/Desktop/диплом/src/main.js#allRenderList#93;" target="C:/Users/ultra/Desktop/диплом/src/js/products/product_edit.js#Component#108;">
+      <point x="-66.0" y="-201.5" />
+      <point x="1807.0" y="260.0" />
+      <point x="513.0" y="260.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9335187760778859" x="2045.3762723177038" y="361.30735858501583" />
+  <SelectedNodes>
+    <node>C:/Users/ultra/Desktop/диплом/src/js/storage/storage_edit.js#Component#61;</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>All</Category>
+  </Categories>
+  <VISIBILITY>Details</VISIBILITY>
+</Diagram>
+

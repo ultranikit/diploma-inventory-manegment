@@ -11,7 +11,7 @@ class ProductAdd extends Component {
   trash() {
     for (let i = 0; i < 20; i += 1) {
       const storage = JSON.parse(localStorage.getItem('groupList'));
-      const user_id = Math.round(Math.random() * 10000);
+      const product_id = Math.round(Math.random() * 10000);
       const storage_id = Math.round(Math.random() * 10);
       const vendor_code = Math.round(Math.random() * 1000);
       const product_name = String('kavo') + String(Math.round(Math.random() * 1000));
@@ -23,7 +23,7 @@ class ProductAdd extends Component {
         }
       });
       const data = {
-        user_id,
+        product_id,
         storage_id,
         vendor_code,
         product_name,
@@ -34,7 +34,7 @@ class ProductAdd extends Component {
     }
   }
   addNewProduct() {
-    const user_id = Math.round(Math.random() * 1000);
+    const product_id = Math.round(Math.random() * 1000);
     const vendor_code = document.querySelector('#vendor_code').value;
     // const contractor = document.querySelector('#contractor').value;
     const product_name = document.querySelector('#product_name').value;
@@ -49,7 +49,7 @@ class ProductAdd extends Component {
     const storage_name = find_group.name;
 
     const data = {
-      user_id,
+      product_id,
       storage_id,
       vendor_code,
       // contractor,

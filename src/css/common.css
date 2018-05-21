@@ -16,7 +16,9 @@ main {
     padding-top: 20px;
     padding-right: 20px;
 }
-
+.modal-footer {
+  z-index: 1;
+}
 @media only screen and (max-width : 992px) {
     header, footer {
         padding-left: 0;
@@ -213,7 +215,7 @@ span.badge.new {
 
 @media only screen and (max-width: 400px) {
   html {
-    font-size: 8px;
+    font-size: 7px;
   }
   .btn-floating.btn-large {
     top: 20px;
@@ -255,10 +257,107 @@ span.badge.new {
     font-size: 12px;
   }
 }
+@media only screen and (min-width: 360px) and (max-width: 375px) {
+  .select-wrapper input.select-dropdown {
+    font-size: 6px;
+  }
+  #tbodyUser tr .destroy {
+    margin-left: -20px;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 0;
+    height: 0;
+  }
+  #tbodyContractor tr .destroy {
+    margin-left: -20px;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 0;
+    height: 0;
+    padding-left: 15px;
+  }
+  #tbodyStorage tr .destroy {
+    margin-left: -20px;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 19px;
+    width: 0;
+    height: 0;
+    padding-left: 20px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 350px) {
+  html {
+    font-size: 6px;
+  }
 
+  .modal a {
+    font-size: 6px;
+  }
+  .select-wrapper input.select-dropdown {
+    font-size: 5px;
+  }
+  .dropdown-content li span{
+    font-size: 12px;
+  }
+  #tbodyUser tr .destroy {
+    margin-left: -20px;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 0;
+    height: 0;
+  }
+  #tbodyContractor tr .destroy {
+    margin-left: -20px;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 0;
+    height: 0;
+    padding-left: 15px;
+  }
+  #tbodyStorage tr .destroy {
+    margin-left: -20px;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 15px;
+    width: 0;
+    height: 0;
+    padding-left: 20px;
+  }
+}
 @media only screen and (min-width: 405px) and (max-width: 720px) {
   html {
-    font-size: 9px;
+    font-size: 8px;
+  }
+  #tbodyUser tr .destroy {
+    margin-left: -20px;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 0;
+    height: 0;
+  }
+  #tbodyContractor tr .destroy {
+    margin-left: -20px;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 0;
+    height: 0;
+    padding-left: 15px;
+  }
+  #tbodyStorage tr .destroy {
+    margin-left: -20px;
+    bottom: 0;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 0;
+    height: 0;
+    padding-left: 15px;
   }
   .btn-floating.btn-large {
     top: 20px;
@@ -276,7 +375,7 @@ span.badge.new {
   font-size: 10px;
   }
   .select-wrapper input.select-dropdown {
-    font-size: 10px;
+    font-size: 8px;
   }
   .stripped {
     margin-left: -17px;
@@ -309,5 +408,22 @@ span.badge.new {
   .btn-large i {
     bottom: 12px;
     position: inherit;
+  }
+  .datepicker-modal {
+    top: 0 !important;
+    height: 350px !important;
+    width: 520px !important;
+  }
+  .modal-content {
+    height: 100% !important;
+  }
+  .pika-single {
+    height: 84%;
+  }
+}
+@media only screen and (min-height: 500px) and (max-height: 800px) {
+  .datepicker-modal {
+    height: 420px;
+    width: 520px !important;
   }
 }

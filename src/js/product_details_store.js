@@ -32,8 +32,8 @@ class ProductStore extends Component {
       modalEdit.innerHTML = '';
     }
 
-    if (products.find(item => item.user_id === Number(product.user_id))) {
-      const index = products.indexOf(products.find(item => item.user_id === Number(product.user_id)));
+    if (products.find(item => item.product_id === Number(product.product_id))) {
+      const index = products.indexOf(products.find(item => item.product_id === Number(product.product_id)));
       // console.log(index);
       products.splice(index, 1);
     }

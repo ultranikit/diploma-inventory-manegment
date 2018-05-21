@@ -129,7 +129,7 @@ class OutGoDocList extends Component {
 
           if (item.document_number === this.counter) {
             // console.log(this.newIndex);
-            trItem.id = `${item.user_id}`;
+            trItem.id = `${item.product_id}`;
             tdCount.innerHTML = `${this.addCount += 1}`;
             tdCount.style.border = '1px solid #000';
             tdCount.style.textAlign = 'center';

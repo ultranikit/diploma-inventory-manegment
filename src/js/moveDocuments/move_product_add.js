@@ -61,7 +61,7 @@ class MoveDocumentAdd extends Component {
         product.storage_id = storageId;
         // console.log(product.storage_id);
         product.storage_name = storageName;
-        product.stirage_entry_id = storageEntryId;
+        product.storage_entry_id = storageEntryId;
         product.storage_entry_name = storageEntryName;
         // console.log(product);
       });
@@ -81,18 +81,18 @@ class MoveDocumentAdd extends Component {
         // console.log(findProd);
         const oldProdNumber = product.product_number;
         if (findProd) {
-          product.user_id = findProd.user_id;
+          product.product_id = findProd.product_id;
           product.product_number = findProd.product_number - product.product_number;
           this.emit('editProduct', product, document);
         }
         if (findEntryProd) {
-          product.user_id = findEntryProd.user_id;
+          product.product_id = findEntryProd.product_id;
           product.storage_name = storageEntryName;
           product.storage_id = storageEntryId;
           product.product_number = findEntryProd.product_number + oldProdNumber;
           this.emit('editProduct', product, document);
         } else {
-          product.user_id = Math.max(...products.map(item => item.user_id)) + 1;
+          product.product_id = Math.max(...products.map(item => item.product_id)) + 1;
           product.storage_name = storageEntryName;
           product.storage_id = storageEntryId;
           product.product_number = oldProdNumber;
@@ -207,7 +207,15 @@ class MoveDocumentAdd extends Component {
     datePickerModal.style.top = '-15%';
     datePickerModal.style.height = '410px';
     datePickerModal.style.width = '600px';
-
+    const html = document.querySelector('html');
+    if (html.clientWidth < 414) {
+      datePickerModal.style.height = '100%';
+      datePickerModal.style.width = '300px';
+    }
+    if (html.clientHeight > 500 && html.clientHeight < 800) {
+      datePickerModal.style.height = '100%';
+      datePickerModal.style.width = '200px';
+    }
     const modalOpened = document.querySelector('.open');
     // modalOpened.style.width = '60%';
     modalOpened.style.maxHeight = '80%';
@@ -275,7 +283,7 @@ class MoveDocumentAdd extends Component {
       this.products.forEach((item) => {
         item.completed = false;
         insetList.innerHTML +=
-          `<tr id="${item.user_id}">
+          `<tr id="${item.product_id}">
            <td>${item.product_name}</td>
            <td>${item.product_number}</td>
            <td><input type="checkbox" class="filled-in" /></td>
@@ -305,7 +313,7 @@ class MoveDocumentAdd extends Component {
       this.td = myEdit.target;
       this.prodId = Number(myEdit.target.parentElement.id);
       // console.log(this.prodId);
-      const findNewProd = this.allAddedProducts.find(product => this.prodId === product.user_id);
+      const findNewProd = this.allAddedProducts.find(product => this.prodId === product.product_id);
       const indexNewProd = this.allAddedProducts.indexOf(findNewProd);
       // console.log(findNewProd);
       // console.log(indexNewProd);
@@ -348,8 +356,8 @@ class MoveDocumentAdd extends Component {
     // console.log(trItemId);
     const checkboxStatus = e.target;
     // console.log(checkboxStatus);
-    const findProduct = this.products.find(item => item.user_id === trItemId);
-    const index = this.products.indexOf(this.products.find(item => item.user_id === trItemId));
+    const findProduct = this.products.find(item => item.product_id === trItemId);
+    const index = this.products.indexOf(this.products.find(item => item.product_id === trItemId));
     try {
       if (!checkboxStatus.checked) {
         findProduct.completed = false;
@@ -383,7 +391,7 @@ class MoveDocumentAdd extends Component {
     this.newList.forEach((item) => {
       if (item.completed) {
         addToTable.innerHTML +=
-          `<tr id="${item.user_id}">
+          `<tr id="${item.product_id}">
               <td>${this.count += 1}</td>
               <td>${item.product_name}</td>
               <td id="quantity_${this.count}">0</td>
