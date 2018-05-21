@@ -256,7 +256,7 @@ class allRenderList extends Component {
       const searchInput = document.querySelector('#search').value;
       this.searchString = searchInput;
       console.log(this.searchString);
-      this.sortedArray = updateProducts.filter(item => item.product_name.indexOf(this.searchString) > -1
+      this.sortedArray = updateProducts.filter(item => item.product_name.toLowerCase().indexOf(this.searchString.toLowerCase()) > -1
         || item.vendor_code.toString().indexOf(this.searchString) > -1);
       // searchInput.value = this.searchString;
       if (searchInput.length === 0) {
@@ -271,7 +271,7 @@ class allRenderList extends Component {
     const keyPress = event.keyCode;
     if (keyPress === 8) {
       this.searchString = this.searchString.slice(0, -1);
-      this.sortedArray = updateProducts.filter(item => item.product_name.indexOf(this.searchString) > -1
+      this.sortedArray = updateProducts.filter(item => item.product_name.toLowerCase().indexOf(this.searchString.toLowerCase()) > -1
         || item.vendor_code.toString().indexOf(this.searchString) > -1);
     }
     if (keyPress === 13) {
@@ -290,7 +290,8 @@ class allRenderList extends Component {
       console.log(keyPress);
       this.searchString += keyPress;
       this.searchString = this.searchString.toLowerCase();
-      this.sortedArray = updateProducts.filter(item => item.vendor_code.toString().indexOf(this.searchString) > -1 || item.product_name.toLowerCase().indexOf(this.searchString) > -1);
+      this.sortedArray = updateProducts.filter(item => item.vendor_code.toString().indexOf(this.searchString) > -1
+        || item.product_name.toLowerCase().indexOf(this.searchString) > -1);
       this.sortedArray.sort((a, b) => a.vendor_code - b.vendor_code);
       this.emit('renderUserList', this.sortedArray, document);
     }
