@@ -420,10 +420,16 @@ span.badge.new {
   .pika-single {
     height: 84%;
   }
+  .datepicker-container {
+    width: 90% !important;
+  }
 }
 @media only screen and (min-height: 500px) and (max-height: 800px) {
   .datepicker-modal {
     height: 420px;
     width: 520px !important;
+  }
+  .datepicker-container {
+    width: 90% !important;
   }
 }
